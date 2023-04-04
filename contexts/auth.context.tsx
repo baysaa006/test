@@ -11,7 +11,11 @@ export interface Payload {
   languages: string[];
 }
 
-export const setAccessToken = (token: string) => localStorage.setItem('token', token);
+export const setAccessToken = (token: string) => {
+  if (typeof localStorage !== 'undefined') {
+    localStorage.setItem('token', token);
+  }
+};
 
 export const getAccessToken = () => {
   if (typeof window !== 'undefined') {

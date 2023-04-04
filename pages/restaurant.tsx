@@ -7,7 +7,7 @@ import SingleRestaurantFooter from './layout/SingleRestaurantFooter';
 import Headers from './layout/Header';
 import { useLazyQuery, useMutation, useQuery, useSubscription } from '@apollo/client';
 import { GET_BRANCH } from '../graphql/query/branch.qeury';
-import { Row, Image, message } from 'antd';
+import { Row, Image, message, Typography } from 'antd';
 import KaraokeAffix from '../components/karaokeAffix/KaraokeAffix';
 import logoLoader from '../assets/loader/logoLoader.gif';
 import styles from './layout/style.module.scss';
@@ -121,7 +121,7 @@ function restaurant() {
     },
   });
 
-  const [getParticipantBuyer] = useLazyQuery(GET_BRANCH, {
+  const [getParticipantBuyer, { data }] = useLazyQuery(GET_BRANCH, {
     onCompleted(data) {
       setParticipant(data?.getParticipantBuyer);
     },
@@ -136,14 +136,18 @@ function restaurant() {
       getParticipantBuyer();
     }
   }, []);
-  // console.log(setAccessToken('oe6A8CGyhdPU3xS0AJRZlnUUapJAnRWKw4d4HcJGYkhpaWCm7v'));
+  const token = () => {
+    if (typeof localStorage !== 'undefined') {
+      return localStorage.getItem('token');
+    }
+  };
 
   return (
     <div>
       <Layout>
         {isAuthenticated === true && (
           <>
-            {!participant && <>1</>}
+            {!participant && <Typography>{token()}</Typography>}
             {/* {loading ? (
               <div className={styles.qmenuLoader}>
                 <Row justify="center">
