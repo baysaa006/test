@@ -1,0 +1,145 @@
+.registerSectionStyle {
+  padding: 80px 15px 30px 15px;
+  :global {
+    .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+      color: #2f313a;
+    }
+    .ant-form-vertical .ant-form-item-label > label {
+      color: #2f313a;
+      font-size: 12px;
+      font-family: sans-serif;
+    }
+    .ant-form-item-explain-error {
+      font-size: 12px;
+      font-family: sans-serif;
+    }
+    .ant-input {
+      border-radius: 4px;
+      font-size: 12px;
+      background-color: #fdfdfd;
+    }
+    .ant-card-body {
+      padding: 24px 24px 0px 24px;
+      border-top: 3px solid #dcdcdc;
+    }
+    .ant-btn {
+      background: #eb6825;
+      color: white;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+    .ant-btn-primary {
+      border-color: white;
+    }
+  }
+}
+
+.userRegister {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  :global {
+    .ant-modal-content {
+      border-radius: 10px;
+    }
+  }
+  .carousel {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 30px;
+    :global {
+      .ant-col {
+        max-width: 100%;
+        min-width: 100%;
+      }
+      .ant-image {
+        width: 150px !important;
+        height: 120px !important;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      .ant-carousel .slick-slide img {
+        height: 120px !important;
+      }
+    }
+  }
+  .registerCard {
+    border-radius: 10px;
+    padding: 0px;
+    padding-top: 30px;
+    width: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    :global {
+      .ant-card-body {
+        height: calc(100% - 90px);
+        padding-top: 0px;
+        width: 450px;
+        border-radius: 10px;
+      }
+      .ant-form-item-control {
+        max-width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .userRegister .registerCard {
+    :global {
+      .ant-card-body {
+        width: 350px;
+        .ant-btn {
+          font-size: 14px;
+          width: 130px !important;
+          padding: 0px !important;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 370px) {
+  .userRegister .registerCard {
+    :global {
+      .ant-card-body {
+        width: 300px;
+        .ant-btn {
+          font-size: 14px;
+          width: 110px !important;
+          padding: 0px !important;
+        }
+      }
+    }
+  }
+}
+.deActiveButton {
+  :global {
+    .ant-btn {
+      color: var(--main);
+      border-color: var(--main);
+      background: #fff;
+      width: 150px;
+      margin-left: 10px;
+    }
+
+    .ant-btn-lg {
+      border-radius: 10px;
+    }
+  }
+}
+
+.activeButton {
+  :global {
+    .ant-btn {
+      color: white;
+      border-color: var(--main);
+      background: var(--main);
+      width: 150px;
+      margin-left: 10px;
+    }
+
+    .ant-btn-lg {
+      border-radius: 10px;
+    }
+  }
+}

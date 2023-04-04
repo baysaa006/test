@@ -1,0 +1,19 @@
+.responsive {
+  max-width: 100%;
+  height: 30vw;
+  max-inline-size: 100%;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
+
+.headerTextDiv {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+}
+
+.headerText {
+  font: 300 32px/34px 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: white;
+}

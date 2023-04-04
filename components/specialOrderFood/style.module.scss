@@ -1,0 +1,25 @@
+.specialOrderFood {
+  margin-top: 5px;
+  margin-bottom: 40px;
+  :global {
+    .ant-typography strong {
+      font-size: 20px;
+    }
+    ::marker {
+      font-size: 0px;
+    }
+    .ant-card-meta-description {
+      font-size: 12px;
+    }
+    .ant-card-body {
+      padding: 14px;
+    }
+
+    .ant-btn {
+      border-radius: 20px;
+      color: white;
+      border-color: #cb2028;
+      background: #cb2028;
+    }
+  }
+}

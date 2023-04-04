@@ -1,0 +1,148 @@
+.singleRestaurantDrawer {
+  height: 400px;
+  width: 360px;
+  overflow: scroll;
+}
+
+.nowPayCancelButton {
+  padding: 17px 16px;
+  width: 100%;
+  :global {
+    .ant-btn {
+      color: var(--main);
+      border-color: var(--main);
+      background: #fff;
+      width: 100%;
+    }
+
+    .ant-btn-lg {
+      border-radius: 10px;
+      height: 45px;
+    }
+  }
+}
+.styleModal {
+  :global {
+    .ant-modal-content {
+      border-radius: 10px;
+    }
+    .ant-drawer-header {
+      position: absolute;
+      z-index: 1;
+      top: 0px;
+      //   width: 100%;
+    }
+    .ant-drawer-footer {
+      box-shadow: 0 10px 37px rgb(0 0 0 / 20%);
+    }
+  }
+}
+.closeButton {
+  position: absolute;
+}
+.confirmOrder {
+  :global {
+    .ant-btn,
+    .ant-btn:active,
+    .ant-btn:focus {
+      width: 100%;
+      border-radius: 8px;
+      background: var(--main);
+    }
+  }
+}
+.drawtButton {
+  padding: 10px 16px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 10px 37px;
+  :global {
+    .ant-btn {
+      width: 100%;
+      border-color: var(--main);
+      background: var(--main);
+      border-radius: 10px;
+      height: 45px;
+    }
+  }
+
+  .text {
+    color: white;
+    padding: 5px;
+  }
+  .totalText {
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    background: var(--main);
+  }
+}
+
+.disabledrawtButton {
+  padding: 10px 16px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 10px 37px;
+  :global {
+    .ant-btn {
+      width: 100%;
+      border-color: hsla(210, 15%, 92%, 1);
+      background: hsla(210, 15%, 92%, 1);
+      border-radius: 10px;
+      height: 45px;
+    }
+  }
+
+  .text {
+    color: hsla(224, 9%, 40%, 1);
+    padding: 5px;
+  }
+  .totalText {
+    color: hsla(224, 9%, 40%, 1);
+    padding: 5px;
+    border-radius: 10px;
+    background: hsla(207, 16%, 89%, 1);
+  }
+}
+
+.banksRadioCard {
+  :global {
+    .ant-radio-inner {
+      display: none;
+    }
+    .ant-image {
+      margin-bottom: 10px;
+    }
+  }
+}
+.banksNormalCard {
+  :global {
+    .ant-image-img {
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      border-radius: 10px;
+    }
+  }
+}
+
+.bankSelectedCard {
+  :global {
+    .ant-image-img {
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      border-radius: 10px;
+      border: 4px solid var(--main);
+    }
+  }
+}
+
+.checkBank {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: absolute;
+  top: 9px;
+  right: 16px;
+  width: 15px;
+}
+
+.unCheckBan {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: none;
+}

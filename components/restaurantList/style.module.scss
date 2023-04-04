@@ -1,0 +1,450 @@
+@import "../singleRestaurantFilterContainer/style.module.scss";
+.filterList {
+  :global {
+    .ant-collapse {
+      background-color: transparent;
+      border: 1px solid transparent;
+    }
+    .ant-collapse-content {
+      background-color: transparent;
+      border-top: 1px solid transparent;
+    }
+    .ant-checkbox-wrapper {
+      color: #b1b1b1;
+    }
+    .ant-checkbox + span {
+      font-weight: normal;
+    }
+  }
+}
+
+//restaurantCardList
+
+.cardTags {
+  .cardStatusTag {
+    :global {
+      .ant-tag {
+        position: absolute;
+        z-index: 1;
+        top: 8px;
+        color: white;
+      }
+    }
+  }
+
+  .cardTagDiv {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+  }
+  :global {
+    .ant-rate {
+      position: absolute;
+      right: 10px;
+      z-index: 1;
+      color: #eb6825;
+    }
+  }
+}
+
+.listItem {
+  :global {
+    .ant-card-cover img {
+      border-radius: 10px 10px 0px 0px;
+      height: 10vw;
+    }
+    .ant-image{
+      width: 100%;
+    }
+    .ant-typography-ellipsis-multiple-line {
+      font-family: Okra, Helvetica, sans-serif;
+    }
+  }
+
+  .rankStyling {
+    :global {
+      .ant-space-align-center {
+        padding: 0px 4px;
+        border-radius: 6px;
+        background-color: #eb6825;
+      }
+    }
+    .rankSpace {
+      place-content: center;
+      :global {
+        .ant-divider-vertical {
+          height: 16px;
+          border-left: 1px solid rgb(207, 207, 207);
+          margin: 0 0px !important;
+        }
+      }
+    }
+    .rankText {
+      :global {
+        .ant-typography {
+          color: white;
+        }
+        .anticon svg {
+          color: white;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1600px){
+  .listItem {
+    :global {
+      .ant-card-cover img {
+        border-radius: 10px 10px 0px 0px;
+        height: 13vw;
+      }
+    }
+  }
+}
+@media (max-width: 1200px){
+  .listItem {
+    :global {
+      .ant-card-cover img {
+        border-radius: 10px 10px 0px 0px;
+        height: 18vw;
+      }
+    }
+  }
+}
+@media (max-width: 980px){
+  .listItem {
+    :global {
+      .ant-card-cover img {
+        border-radius: 10px 10px 0px 0px;
+        height: 13vw;
+      }
+    }
+  }
+}
+.cardDropDown {
+  :global {
+    .ant-dropdown-menu {
+      border-radius: 10px !important;
+    }
+  }
+}
+
+@media (max-width: 765px) {
+  .cardTags {
+    :global {
+      .ant-tag {
+        line-height: 14px;
+        font-size: 10px;
+        padding: 0 2px !important;
+      }
+    }
+    .cardStatusTag {
+      :global {
+        .ant-tag {
+          position: absolute;
+          z-index: 1;
+          top: 9px;
+          line-height: 14px;
+          font-size: 10px;
+          padding: 0px 2px !important;
+          color: white;
+        }
+      }
+    }
+
+    .cardTagDiv {
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+    }
+    :global {
+      .ant-rate {
+        position: absolute;
+        right: 10px;
+        z-index: 1;
+        color: #eb6825;
+      }
+    }
+  }
+
+  .listItem {
+    :global {
+      .ant-card-cover img {
+        border-radius: 10px 10px 0px 0px;
+        height: 30vw;
+      }
+      .ant-space-align-center {
+        gap: 2px !important;
+      }
+      .ant-typography-ellipsis-multiple-line {
+        font-family: Okra, Helvetica, sans-serif;
+      }
+    }
+
+    .rankStyling {
+      white-space: nowrap;
+      :global {
+        .ant-space-align-center {
+          padding: 0px 4px;
+          border-radius: 6px;
+          background-color: #eb6825;
+          font-size: 12px;
+        }
+        .ant-typography {
+          font-size: 10px;
+        }
+      }
+      .rankSpace {
+        place-content: center;
+        :global {
+          .ant-divider-vertical {
+            height: 16px;
+            border-left: 1px solid rgb(207, 207, 207);
+            margin: 0 0px !important;
+          }
+        }
+      }
+      .rankText {
+        :global {
+          .ant-typography {
+            color: white;
+            font-size: 10px;
+          }
+          .anticon svg {
+            color: white;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cardKmNumber {
+  :global {
+    ant-card-body {
+      padding: 0px 0px 0px 0px !important;
+    }
+    .ant-card-bordered {
+      border-radius: 10px !important;
+    }
+    .ant-card {
+      border-radius: 10px !important;
+    }
+  }
+}
+.tagsText {
+  :global {
+    .ant-typography {
+      color: white;
+      overflow-wrap: break-word;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 5px;
+      font-size: 12px;
+      border-radius: 7px;
+    }
+  }
+}
+.cardDiv {
+  border-radius: 10px;
+  address {
+    margin-bottom: 0 !important;
+  }
+  :global {
+    .ant-card-body {
+      padding: 12px 14px 0px 14px;
+    }
+  }
+
+  .cardRow {
+    margin: 0px 0px 0px 0px;
+    .cardCol {
+      align-self: center;
+      text-align-last: center;
+    }
+  }
+}
+
+.sortCard {
+  border-radius: 10px;
+}
+
+.advertisementCard {
+  border-radius: 10px;
+}
+
+.kdsCard {
+  border-radius: 10px;
+}
+
+///filterList
+
+.filterRow {
+  background-color: #eb6825;
+  :global {
+    .ant-divider-vertical {
+      height: 1.9em;
+      border-left: 1px solid white;
+      place-self: center;
+    }
+  }
+}
+.filterCol {
+  text-align: center;
+  padding: 10px;
+  :global {
+    .ant-typography {
+      color: white;
+    }
+  }
+}
+.filterIcon {
+  margin-top: 0px;
+}
+
+@media (max-width: 1000px) {
+  .rowMargin {
+    padding: 0px;
+    :global {
+      .ant-row-center {
+        background-color: #f6f7f8 !important;
+      }
+      .ant-list-pagination {
+        text-align: center;
+      }
+      .ant-pagination-item-active {
+        border-color: #eb6825;
+      }
+      .ant-pagination-item {
+        border-radius: 16px;
+      }
+      .ant-pagination-item-active a {
+        color: #eb6825;
+      }
+      .ant-pagination-prev .ant-pagination-item-link,
+      .ant-pagination-next .ant-pagination-item-link {
+        border-radius: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  .filterRow {
+    display: none;
+    background-color: #eb6825;
+    :global {
+      .ant-divider-vertical {
+        height: 1.9em;
+        border-left: 1px solid white;
+        place-self: center;
+      }
+    }
+  }
+
+  .rowMargin {
+    padding: 20px;
+    background-color: #f6f7f8;
+    :global {
+      .ant-list-pagination {
+        text-align: center;
+      }
+      .ant-row-center {
+        background-color: #f6f7f8 !important;
+      }
+      .ant-list-pagination {
+        text-align: center;
+      }
+      .ant-pagination-item-active {
+        border-color: #eb6825;
+      }
+      .ant-pagination-item-active a {
+        color: #eb6825;
+      }
+      .ant-pagination-item {
+        border-radius: 16px;
+      }
+      .ant-pagination-prev .ant-pagination-item-link,
+      .ant-pagination-next .ant-pagination-item-link {
+        border-radius: 16px;
+      }
+    }
+  }
+}
+//filterRestaurantCard
+
+//filterRestaurant
+
+.restaurantFilter {
+  max-width: 190px;
+  display: flex;
+  flex-direction: column;
+  i{
+    position: absolute;
+    font-size: 18px;
+    top: 2px;
+  }
+  .more{
+    color: var(--main);
+    cursor: pointer;
+  }
+  .category{
+    max-height: 440px;
+    overflow-y: auto;
+  }
+  .head{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    span{
+      margin-left: 25px;
+      color: #5C616F;
+      font-weight: 700;
+    }
+  }
+  .item{
+    height: 28px;
+    margin: 5px 0px;
+    margin-left: 10px;
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #5C616F;
+    cursor: pointer;
+    label{
+      cursor: pointer;
+    }
+    &:hover{
+      background-color: #EFEFEF;
+      box-shadow: 0px 2px 0px #E3E3E3;
+      border-radius: 8px;
+      color: rgb(82, 82, 82);
+    }
+  }
+  .itemActive{
+    height: 28px;
+    margin: 5px 0px;
+    margin-left: 10px;
+    padding: 0px 15px;
+    background-color: #EFEFEF;
+    box-shadow: 0px 2px 0px #E3E3E3;
+    border-radius: 8px;
+    color: rgb(63, 63, 63);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    label{
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .restaurantFilter {
+    display: none;
+  }
+}

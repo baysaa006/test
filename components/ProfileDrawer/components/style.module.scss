@@ -1,0 +1,316 @@
+.customerInformation {
+  margin-top: 15px;
+  :global {
+    .ant-form-item {
+      margin-bottom: 0px;
+      line-height: 0.5715;
+    }
+    .ant-radio-group-large .ant-radio-button-wrapper {
+      font-size: 14px;
+    }
+    .ant-input:hover {
+      border-color: #cdd4db;
+      border: 1.9px solid #cdd4db;
+      font-size: 15px;
+    }
+    .ant-input:focus,
+    .ant-input-focused {
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    }
+
+    .ant-input {
+      height: 50px;
+      background-color: #f6f7f8;
+      color: #363d4e;
+      padding: 11px 15px 0px 15px;
+      font-weight: 500;
+      border-radius: 10px;
+      border: 1px solid #cdd4db;
+    }
+    input:-internal-autofill-selected {
+      background-color: #f6f7f8 !important;
+    }
+
+    .ant-input:focus {
+      height: 50px;
+      background-color: #f6f7f8;
+      color: #363d4e;
+      padding: 11px 15px 0px 15px;
+      font-weight: 500;
+      border-radius: 10px;
+      &:focus,
+      &:not(:placeholder-shown),
+      & :-webkit-autofill {
+        background-color: #f6f7f8;
+        font-weight: 500;
+        & + .ant-typography {
+          top: -45px;
+          left: 12px;
+          color: #5c616f;
+          font-weight: 400;
+          font-size: 11px;
+        }
+      }
+    }
+
+    textarea,
+    input[type='date'],
+    input[type='datetime'],
+    input[type='datetime-local'],
+    input[type='email'],
+    input[type='month'],
+    input[type='number'],
+    input[type='password'],
+    input[type='range'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
+    input[type='time'],
+    input[type='url'],
+    input[type='week'] {
+      font-size: 16px;
+    }
+  }
+
+  .addressInput {
+    :global {
+      .ant-input {
+        height: 50px;
+        background-color: #f6f7f8;
+        color: #363d4e;
+        padding: 11px 15px 0px 15px;
+        font-weight: 500;
+      }
+      .ant-input:hover {
+        border-color: #f6f7f8;
+        border: 0px solid #f6f7f8;
+        font-size: 15px;
+      }
+      textarea,
+      input[type='date'],
+      input[type='datetime'],
+      input[type='datetime-local'],
+      input[type='email'],
+      input[type='month'],
+      input[type='number'],
+      input[type='password'],
+      input[type='range'],
+      input[type='search'],
+      input[type='tel'],
+      input[type='text'],
+      input[type='time'],
+      input[type='url'],
+      input[type='week'] {
+        border: 0px solid #f6f7f8;
+      }
+    }
+    .addressInputRow {
+      flex-flow: nowrap;
+      align-items: center;
+      border: 1px solid #cdd4db !important;
+      border-radius: 10px;
+      background-color: #f6f7f8;
+    }
+    .addressInputRow:hover {
+      border: 1px solid #cdd4db !important;
+    }
+  }
+  .placeholderText {
+    :global {
+      .ant-form-item-with-help {
+        & + .ant-typography {
+          position: relative;
+          top: -74px;
+          left: 12px;
+          color: #363d4e78;
+          font-size: 11px;
+          pointer-events: none;
+          transition: all 0.1s ease;
+        }
+      }
+      .ant-typography {
+        position: relative;
+        top: -52px;
+        left: 12px;
+        color: #363d4e78;
+        font-size: 11px;
+        pointer-events: none;
+        transition: all 0.1s ease;
+      }
+    }
+  }
+  .placeholderSelectText {
+    :global {
+      .ant-form-item-with-help {
+        & + .ant-typography {
+          position: relative;
+          top: -85px !important;
+          left: 12px;
+          color: #363d4e78;
+          font-size: 11px;
+          pointer-events: none;
+          transition: all 0.1s ease;
+        }
+      }
+      .ant-typography {
+        position: relative;
+        top: -43px !important;
+        left: 12px;
+        color: #363d4e78;
+        font-size: 11px;
+        pointer-events: none;
+        transition: all 0.1s ease;
+      }
+    }
+  }
+  .rightIcon {
+    :global {
+      .anticon {
+        position: absolute;
+        top: 19px;
+        font-size: 12px;
+        right: 5px;
+      }
+    }
+  }
+  .mapPinIcon {
+    :global {
+      .anticon {
+        position: absolute;
+        top: 25px;
+        font-size: 12px;
+        left: 3px;
+      }
+    }
+  }
+  .deliveryTime {
+    :global {
+      .ant-form-item {
+        width: 110%;
+      }
+    }
+  }
+  .timeSelect {
+    :global {
+      .ant-select-lg {
+        font-size: 15px;
+      }
+      .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+        padding: 8px 11px;
+      }
+      .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+        height: 50px;
+      }
+      .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        position: relative;
+        background-color: #f6f7f8;
+        border: 1px solid #cdd4db;
+        border-radius: 10px;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+      .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        box-shadow: 0 0 0 0px #cdd4db;
+      }
+      .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+        background-color: #cdd4db;
+      }
+      .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+        background-color: #cdd4db !important;
+      }
+    }
+  }
+}
+
+.disableButton {
+  :global {
+    .ant-btn[disabled],
+    .ant-btn[disabled]:hover,
+    .ant-btn[disabled]:focus,
+    .ant-btn[disabled]:active {
+      border-color: #cdd4db;
+    }
+    .ant-btn {
+      width: 100%;
+      border-color: #cdd4db;
+      background: #f5f5f5;
+      border-radius: 10px;
+      height: 45px;
+    }
+  }
+
+  .text {
+    color: #cdd4db;
+    padding: 5px;
+  }
+}
+
+.confirmButton {
+  :global {
+    .ant-btn {
+      width: 100%;
+      border-color: var(--main);
+      background: var(--main);
+      border-radius: 10px;
+      height: 45px;
+    }
+  }
+
+  .text {
+    color: white;
+    padding: 5px;
+  }
+  .totalText {
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    background: var(--main);
+  }
+}
+.genderRadioButton {
+  :global {
+    .ant-radio-button-wrapper-checked:not(
+        [class*=' ant-radio-button-wrapper-disabled']
+      ).ant-radio-button-wrapper:first-child {
+      border-right-color: hsla(15, 88%, 58%, 1);
+      width: 100%;
+      text-align: center;
+      margin-right: 5px;
+      height: 40px;
+      line-height: 35px;
+    }
+
+    .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+      color: hsla(15, 88%, 58%, 1);
+      background: hsla(16, 100%, 95%, 1);
+      border-color: hsla(15, 88%, 58%, 1);
+      border-radius: 10px;
+      border: 1px solid #f26536;
+    }
+    .ant-radio-button-wrapper:not(:first-child)::before {
+      display: none;
+    }
+    .ant-radio-group {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+      box-shadow: 0 0 0 0px #e6f7ff;
+    }
+    .ant-radio-button-wrapper:last-child {
+      border-radius: 10px;
+    }
+    .ant-radio-button-wrapper {
+      color: hsla(224, 7%, 68%, 1);
+      background: hsla(210, 12%, 97%, 1);
+      border-color: hsla(224, 7%, 68%, 1);
+      border-radius: 10px;
+      border: 1px solid hsla(224, 7%, 68%, 1);
+      text-align: center;
+      width: 100%;
+      height: 40px;
+      line-height: 35px;
+    }
+  }
+}

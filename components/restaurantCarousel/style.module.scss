@@ -1,0 +1,21 @@
+.restaurantCarousel {
+  margin-top: 10px;
+  :global {
+    .ant-typography strong {
+      font-size: 20px;
+      padding-bottom: 5px;
+    }
+    .react-multi-carousel-item.react-multi-carousel-item--active.image-item::marker{
+      display: none;
+    }
+    ul.ba {
+      list-style-type: none;
+  }
+  ::marker {
+    font-size: 0px;
+  }
+  }
+  .restaurantCarouselDiv{
+    padding: 0px 20px 0px 20px;
+  }
+}

@@ -1,0 +1,166 @@
+.smallText {
+  color: #fff !important;
+  text-align: center;
+  margin-top: -22px !important;
+}
+
+.bigText {
+  text-align: center;
+  display: block;
+  color: #fff !important;
+  line-height: 65px !important;
+}
+
+.searchInput {
+  position: relative;
+  padding: 7px 10px 7px;
+  background: #949cad66;
+  border-radius: 35px;
+  :global {
+    .ant-input-affix-wrapper {
+      border-radius: 30px;
+      line-height: 2.5715;
+      padding: 4px 21px;
+      font-size: 14px;
+      border: 1px solid #fafafa;
+    }
+    .ant-input-affix-wrapper > input.ant-input {
+      place-self: center;
+      font-size: 17px;
+    }
+    .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+      border-color: white;
+    }
+    .anticon svg {
+      font-size: 20px;
+      color: #999;
+      margin-top: 0px !important;
+    }
+    .ant-select {
+      width: 100%;
+    }
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      border-radius: 15px;
+    }
+    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+      height: 35px;
+      font-size: 17px;
+      font-family: Open Sans, sans-serif;
+    }
+    .ant-select-arrow {
+      top: 38%;
+      right: 17px;
+    }
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-search-input {
+      font-size: 17px;
+      font-family: Open Sans, sans-serif;
+    }
+    .ant-select-single .ant-select-selector .ant-select-selection-item,
+    .ant-select-single .ant-select-selector .ant-select-selection-placeholder {
+      line-height: 34px;
+    }
+    .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      border-color: white;
+      box-shadow: 0 0 0 2px white;
+    }
+    .ant-select:hover {
+      border-color: #fff;
+    }
+    .ant-select-clear {
+      top: 38%;
+      right: 45px;
+    }
+  }
+}
+
+.searchInputRow {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  top: 110px;
+}
+
+@media (max-width: 999px) {
+  .searchInputRow {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+  }
+}
+
+.tagsText {
+  :global {
+    .ant-typography {
+      color: white;
+      overflow-wrap: break-word;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 5px;
+      font-size: 12px;
+      border-radius: 7px;
+    }
+  }
+}
+
+.selectInputSearch {
+  :global {
+    .ant-select {
+      width: 100%;
+    }
+  }
+}
+
+.searchNoIconDiv {
+  :global {
+    .ant-image-img {
+      opacity: 0.4;
+    }
+  }
+}
+.placeHolder {
+  :global {
+    .ant-typography {
+      color: #b1b1b1;
+    }
+    .anticon {
+      margin-top: 6px;
+    }
+  }
+}
+//review
+.review {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.showRestaurantDetail:hover {
+  color: #fff;
+}
+.showRestaurantDetail {
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  background-color: none;
+}
+.reviewHeader {
+  color: #fff;
+}
+.logoHolder {
+  position: absolute;
+  top: 72%;
+  right: -5%;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 650px) {
+  .logoHolder {
+    position: absolute;
+    top: 45%;
+    right: 15%;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+  }
+}

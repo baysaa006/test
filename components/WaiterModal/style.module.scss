@@ -1,0 +1,108 @@
+.orderReview {
+  :global {
+    .ant-card-body {
+      padding: 11px;
+    }
+    .ant-card-bordered {
+      border-radius: 10px;
+      // border: 1px solid var(--main);
+    }
+    .ant-card {
+      width: 100%;
+      background: var(--main);
+    }
+  }
+}
+.orderPercent {
+  :global {
+    .ant-typography strong {
+      padding: 5px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+  }
+}
+
+.nowPayDiv {
+  :global {
+    .ant-modal-content {
+      border-radius: 10px;
+    }
+  }
+}
+
+.paymentButton {
+  :global {
+    .ant-card-body {
+      padding: 3px 7px;
+    }
+    .ant-card-bordered {
+      border: 1px solid #dddddd;
+      border-radius: 8px;
+    }
+  }
+}
+
+.kassButton {
+  :global {
+    .ant-card-body {
+      padding: 16px 7px;
+    }
+    .ant-card-bordered {
+      border: 1px solid #dddddd;
+      border-radius: 8px;
+    }
+  }
+}
+
+.nowPayCancelButton {
+  :global {
+    .ant-btn {
+      color: var(--main);
+      border-color: var(--main);
+      background: #fff;
+      width: 257px;
+    }
+
+    .ant-btn-lg {
+      border-radius: 10px;
+    }
+  }
+}
+.nowPayokButton {
+  :global {
+    .ant-btn {
+      color: white;
+      border-color: var(--main);
+      background: var(--main);
+      width: 257px;
+    }
+
+    .ant-btn-lg {
+      border-radius: 10px;
+    }
+  }
+}
+
+.drawtButton {
+  :global {
+    .ant-btn {
+      width: 100%;
+      border-color: var(--main);
+      background: var(--main);
+      border-radius: 10px;
+      height: 45px;
+    }
+  }
+
+  .text {
+    color: white;
+    padding: 5px;
+  }
+  .totalText {
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    background: var(--main);
+  }
+}

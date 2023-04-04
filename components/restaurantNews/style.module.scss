@@ -1,0 +1,333 @@
+.container {
+  padding-top: 2rem;
+  background-color: #fff;
+}
+.container:nth-child(2) {
+  border-bottom: none;
+}
+.branchDataContainer {
+  overflow-x: hidden;
+  position: relative;
+  padding: 0 !important;
+}
+.branchInfoHead {
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+.branchInfo {
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+.commentName {
+  color: #fff;
+  line-height: 1.5em;
+}
+.branchFooter {
+  padding-bottom: 1.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.branchLike {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.branchIcons {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+.branchIcon {
+  border-radius: 50%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  background: rgba(197, 197, 197, 0.25);
+}
+.branchText {
+  padding-right: 2rem;
+  z-index: 50;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.branchTextblur {
+  height: 70%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  background-blend-mode: lighten;
+  backdrop-filter: blur(36px);
+  mask: linear-gradient(#0000 0%, black 110%);
+}
+.branchName {
+  line-height: 37px !important;
+  font-size: 28px !important;
+  margin: 0;
+  font-weight: bold;
+  color: #fff;
+  z-index: 2;
+}
+.review {
+  margin-bottom: 2rem;
+}
+.reviewContainer {
+  overflow-x: scroll;
+  height: 50vh;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.reviewHead::-webkit-scrollbar {
+  display: none;
+}
+.reviewHead {
+  overflow-x: scroll;
+  gap: 10px;
+  align-items: center;
+  top: 0;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  z-index: 2;
+  height: 10vh;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+.contact {
+  font-size: 17px;
+  color: #77798c;
+  line-height: none;
+  margin: 0;
+  width: max-content;
+  padding: 0;
+}
+.contactInfo {
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  gap: 10px !important;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0 !important;
+}
+
+.time {
+  justify-content: space-between;
+  display: flex;
+}
+.openClose {
+  padding-left: 3.55rem;
+  color: var(--main);
+}
+.timetableDays {
+  font-size: 17px;
+  color: #77798c !important;
+  line-height: none;
+  margin: 0;
+  width: max-content;
+  padding: 0;
+}
+.timetableCon {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.timetable {
+  color: #999ba3;
+  font-size: 14px;
+  line-height: none;
+  margin: 0;
+  width: max-content;
+}
+.phone {
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  color: #484848;
+}
+.iconContainer {
+  background-color: var(--main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 2rem;
+}
+.reviewAdditional {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+.reviewAdditional1 {
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  flex-direction: row;
+}
+.liked {
+  color: var(--main) !important;
+  gap: 10px;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+}
+.reviewCon {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.reviewComment {
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reveiewPercentage {
+  padding: 1rem;
+  height: 100%;
+  border-right: 1px solid #eee;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.totalReview {
+  font-weight: 100 !important;
+  margin: 0;
+  font-style: normal;
+  font-size: 19px !important;
+  color: #fff !important;
+  line-height: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.percentage {
+  font-weight: 100 !important;
+  color: #fff !important;
+}
+.services {
+  font-size: 12px;
+  font-weight: 100 !important;
+  color: #fff !important;
+}
+
+.totalText {
+  font-size: 2px;
+  gap: 5px;
+  margin: 0;
+  letter-spacing: 1px !important;
+  line-height: 19px !important;
+  text-transform: uppercase !important;
+  font-size: 15px !important;
+  font-style: normal !important;
+  font-weight: 100 !important;
+  color: #eee !important;
+  display: flex;
+  flex-direction: row;
+}
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.scrollImages {
+  overflow-y: scroll;
+  display: flex;
+  gap: 10px;
+}
+.image {
+  width: 280px;
+  border-radius: 10px;
+}
+.scrollImages::-webkit-scrollbar {
+  display: none;
+}
+.description {
+  margin: 0;
+}
+.aboutRestaurant {
+  width: max-content !important;
+  font-size: 19px !important;
+  margin: 0;
+  text-transform: none !important;
+  line-height: 20px !important;
+  color: #77798c !important;
+}
+.openHours {
+  gap: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.navigator {
+  right: 1rem;
+  bottom: 10%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--main);
+  z-index: 50;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.percantageContainer {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid var(--main);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 10px;
+}
+.reviewFirstname {
+  margin: 0;
+  font-weight: 700;
+}
+.commentPercentage {
+  width: max-content;
+  color: var(--main) !important;
+}
+.comment {
+  margin: 0;
+  font-size: 14px !important;
+}
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.85);
+  background-color: #b1b1b1;
+  opacity: 0.3;
+  width: 60px;
+  height: 50px;
+}

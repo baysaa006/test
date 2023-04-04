@@ -1,0 +1,383 @@
+.headerStyling {
+  :global {
+    .ant-layout-header {
+      height: 50px;
+      padding: 0px 50px 0px 10px;
+      color: rgba(0, 0, 0, 0.85);
+      line-height: 50px;
+      background: transparent;
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+    }
+    .ant-image {
+      position: relative;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .ant-btn-primary {
+      border-color: transparent;
+      background: transparent;
+    }
+  }
+  .text {
+    cursor: pointer;
+    color: white;
+  }
+  .buttonText {
+    color: white;
+  }
+}
+.dropDownLanguage {
+  :global {
+    .ant-dropdown-menu-item,
+    .ant-dropdown-menu-submenu-title {
+      width: 28px !important;
+      padding: 5px 0px;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+}
+.languageLogo {
+  :global {
+    .ant-image {
+      position: relative;
+      display: inline-block;
+      margin-top: 0px;
+    }
+  }
+}
+
+.bigmenu {
+  float: right;
+}
+
+@media (min-width: 750px) {
+  .menubtn {
+    margin-top: 20px;
+    display: none;
+  }
+  .searchBotton {
+    margin-top: 20px;
+    display: none;
+  }
+  .refreshButton {
+    margin-top: 20px;
+    display: none;
+  }
+  .informationButton {
+    display: none;
+    margin-top: 10px;
+    right: 10px;
+  }
+
+  .languageLogoTypes {
+    display: none;
+    :global {
+      .ant-image {
+        position: relative;
+        display: inline-block;
+        margin-top: 0px;
+      }
+    }
+  }
+
+  .informationButtonWebType {
+    font-size: 20px;
+  }
+  .bigmenu {
+    margin-top: 0px;
+    right: 0px;
+  }
+}
+
+@media (max-width: 750px) {
+  .bigmenu {
+    margin-top: 10px;
+    display: none;
+  }
+  .menubtn {
+    position: absolute;
+    margin-top: 10px;
+    left: 20px;
+  }
+  .informationButton {
+    position: absolute;
+    margin-top: 10px;
+    right: 50px;
+  }
+  .languageLogoTypes {
+    position: absolute;
+    margin-top: 0px;
+    right: 15px;
+    :global {
+      .ant-image {
+        position: relative;
+        display: inline-block;
+        margin-top: 0px;
+      }
+    }
+  }
+  .informationButtonWebType {
+    display: none;
+    margin-top: 10px;
+    right: 10px;
+  }
+  .searchBotton {
+    position: absolute;
+    margin-top: 10px;
+    right: 80px;
+  }
+  .refreshButton {
+    position: absolute;
+    margin-top: 10px;
+    right: 110px;
+  }
+  .buttonText {
+    color: white;
+  }
+  .text {
+    cursor: pointer;
+  }
+}
+
+.mobileDiv {
+  display: flex;
+  :global {
+    .ant-btn-primary {
+      border-color: #cb2028;
+      background: #cb2028;
+    }
+  }
+}
+
+.backtoTop {
+  font-size: 30px;
+  background: transparent;
+  color: black;
+  cursor: pointer;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 0 1px 10px white;
+}
+
+.headerStyles {
+  background-color: white;
+  :global {
+    .ant-btn {
+      border-color: #eb6825;
+    }
+    .ant-btn:hover {
+      background-color: #eb6825;
+    }
+  }
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  place-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 0px 15px 0px;
+  .registerButtonStyle {
+    background: #eb6825;
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-left: 30px;
+    text-transform: uppercase;
+  }
+  .dropDownButtonStyle {
+    color: white;
+    border-radius: 5px;
+    background: #eb6825;
+  }
+  .loginStyle {
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+    color: #333;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      border-bottom: 2px solid #eb6825;
+    }
+  }
+}
+
+.mobileTypeLogo {
+  height: 40px;
+  cursor: pointer;
+}
+
+@media (min-width: 1042px) {
+  .mobileTypeNav {
+    display: none;
+  }
+  .language {
+    display: none;
+  }
+  .webLanguage {
+    display: flex;
+  }
+}
+@media (max-width: 720px) {
+  .navCol {
+    text-align: center;
+    padding-bottom: 15px;
+    padding-left: 11px;
+    text-align: start;
+  }
+  .mobileTypeLogo {
+    height: 30px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 992px) {
+  .dropDownLanguage {
+    :global {
+      .ant-dropdown-menu-item,
+      .ant-dropdown-menu-submenu-title {
+        width: 28px !important;
+        padding: 5px 0px;
+        margin-left: 7px;
+        margin-right: 7px;
+      }
+    }
+  }
+}
+@media (max-width: 1042px) {
+  .mobileTypeNav {
+    position: absolute;
+    right: 50px;
+    top: 0px;
+  }
+  .language {
+    position: absolute;
+    right: 10px;
+    top: 4px;
+  }
+  .webLanguage {
+    display: none;
+  }
+}
+
+.dropDownMenu {
+  :global {
+    .ant-typography {
+      color: #999;
+      font-size: 15px;
+    }
+    .anticon svg {
+      color: #999;
+      font-size: 17px;
+    }
+  }
+}
+
+@media (min-width: 1042px) {
+  .registerButton {
+    display: inline;
+  }
+}
+
+@media (max-width: 1042px) {
+  .registerButton {
+    display: none;
+  }
+  .headerStyles {
+    background-color: white;
+    :global {
+      .ant-btn {
+        border-color: #eb6825;
+      }
+      .ant-btn:hover {
+        background-color: #eb6825;
+      }
+    }
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0px 0px 0px;
+    .registerButtonStyle {
+      background: #eb6825;
+      color: white;
+      border-radius: 5px;
+      font-weight: 700;
+      margin-left: 30px;
+      text-transform: uppercase;
+    }
+    .dropDownButtonStyle {
+      color: white;
+      border-radius: 5px;
+      background: #eb6825;
+    }
+    .loginStyle {
+      font-size: 13px;
+      font-weight: 700;
+      display: inline-block;
+      color: #333;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:hover {
+        border-bottom: 2px solid #eb6825;
+      }
+    }
+  }
+}
+
+.qmenuLoader {
+  :global {
+    .ant-row-center {
+      position: absolute;
+      top: 330px;
+      width: 100%;
+    }
+  }
+}
+
+///TankYou
+///
+///
+///
+
+.thankyou {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+
+  @media (min-width: 1200px) {
+    .successTitle {
+      :global {
+        .ant-typography {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .successTitle {
+      :global {
+        .ant-typography {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 781px) {
+    .successTitle {
+      :global {
+        .ant-typography {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

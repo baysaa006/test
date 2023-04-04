@@ -1,0 +1,73 @@
+.contentDiv {
+  :global {
+    .ant-card {
+      border-radius: 10px;
+    }
+    .ant-card-body {
+      padding: 8px;
+    }
+    .ant-btn {
+      border-radius: 10px;
+      background-color: var(--main);
+    }
+    div.ant-typography {
+      margin-bottom: 0 !important;
+    }
+  }
+  .cardRow {
+    place-items: center;
+  }
+
+  .indexBar {
+  }
+  .AtoZListCard {
+    border-radius: 5rem;
+    margin: 5px 0px 16px 0px;
+  }
+  // .ant-typography {
+  //   margin-bottom: 0 !important;
+  // }
+}
+
+// @media (min-width: 1000px) {
+//   .indexStyle {
+//     margin-right: 1000px;
+//   }
+// }
+
+.active {
+  width: 22px;
+  border-radius: 12px;
+  a {
+    color: #1890ff;
+  }
+}
+
+.active:hover {
+  background: #1890ff;
+  width: 22px;
+  border-radius: 12px;
+  a {
+    color: white;
+  }
+}
+
+.yScroll {
+  :global {
+    .ant-card-body {
+      overflow: auto;
+      height: 70vh;
+      padding: 0px 10px 0px 0px;
+    }
+    .ant-card-bordered {
+      border: none;
+    }
+  }
+}
+.noMusicResult {
+  :global {
+    .ant-image {
+      opacity: 0.2;
+    }
+  }
+}

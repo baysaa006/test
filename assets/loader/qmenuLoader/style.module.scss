@@ -1,0 +1,53 @@
+$animation-time: 2.5s;
+
+.wrapper{
+    margin: 10px;
+    border-radius: 22%;
+    transform: rotate(180deg);
+    // filter: drop-shadow(-6px -5px 3px rgb(0 0 0 / 0.15));
+    position: relative;
+}
+
+.item{
+    fill: transparent;
+    stroke: #eb1a34;
+    stroke-width: 5;    
+    stroke-dasharray: 70;
+    clip-path: polygon(110% 110%, -100% 100%, -10% 8%, 20% 33%, 33% 19%, -10% -20%, 110% -100%);
+    animation: dash $animation-time infinite ease;
+}
+
+.item2{
+    fill: #eb1a34;
+    stroke: #eb1a34;
+    stroke-width: 4;
+    animation: centerShape $animation-time infinite ease;
+}
+
+@keyframes dash {
+    0%{
+        opacity: 0;
+        stroke-dashoffset: 70;
+    }
+    70%{
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes centerShape {
+    0%, 10%,20%,30%,40%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

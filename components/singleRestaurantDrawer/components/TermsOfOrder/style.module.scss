@@ -1,0 +1,63 @@
+.singleRestaurantDrawer {
+  height: 400px;
+  width: 360px;
+  overflow: scroll;
+}
+
+.styleModal {
+  :global {
+    .ant-modal-content {
+      border-radius: 10px;
+    }
+    .ant-modal-header {
+      border-radius: 10px 10px 0 0;
+    }
+    .ant-drawer-header {
+      position: absolute;
+      z-index: 1;
+      top: 0px;
+      //   width: 100%;
+    }
+    .ant-drawer-footer {
+      box-shadow: 0 10px 37px rgb(0 0 0 / 20%);
+    }
+  }
+}
+.closeButton {
+  position: absolute;
+}
+.confirmOrder {
+  :global {
+    .ant-btn,
+    .ant-btn:active,
+    .ant-btn:focus {
+      width: 100%;
+      border-radius: 8px;
+      background: var(--main);
+    }
+  }
+}
+.drawtButton {
+  padding: 10px 16px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 10px 37px;
+  :global {
+    .ant-btn {
+      width: 100%;
+      border-color: var(--main);
+      background: var(--main);
+      border-radius: 10px;
+      height: 45px;
+    }
+  }
+
+  .text {
+    color: white;
+    padding: 5px;
+  }
+  .totalText {
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    background: var(--main);
+  }
+}

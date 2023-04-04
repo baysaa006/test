@@ -1,0 +1,35 @@
+.searchContentDiv {
+  :global {
+    .ant-input-affix-wrapper {
+      border-radius: 10px;
+      padding: 0px 11px;
+    }
+    .ant-input-affix-wrapper > input.ant-input {
+      font-size: 16px;
+    }
+  }
+  .searchInput {
+    background-color: white;
+    padding: 10px;
+    :global {
+      .anticon.ant-input-clear-icon {
+        font-size: 18px;
+      }
+      .anticon.ant-input-clear-icon,
+      .ant-input-clear-icon {
+        font-size: 20px;
+      }
+      .ant-input-suffix {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.noMusicResult {
+  :global {
+    .ant-image {
+      opacity: 0.2;
+    }
+  }
+}

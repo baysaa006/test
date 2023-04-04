@@ -1,0 +1,20 @@
+
+
+.warning{
+    :global{
+        .ant-alert-info{ 
+            background-color: #E5F9FE;
+            border: 1px solid #E5F9FE;
+        }
+        .ant-alert{
+            color: #0093B9
+        }
+    }
+    .ant-alert-info .ant-alert-icon{
+        color:#0BB8E4
+    }
+    .ant-alert-with-description{
+        padding: 10px 10px 10px 15px;
+    }
+   
+}

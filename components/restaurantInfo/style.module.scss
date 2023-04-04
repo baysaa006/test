@@ -1,0 +1,40 @@
+.mobileDiv {
+  display: flex;
+  :global {
+    .ant-btn-primary {
+      border-color: #cb2028;
+      background: #cb2028;
+    }
+    .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+      background-color: #edf2f4;
+      border-radius: 10px;
+    }
+    .ant-menu-inline,
+    .ant-menu-vertical,
+    .ant-menu-vertical-left {
+      border-right: 0px solid #f0f0f0;
+    }
+    .anticon {
+      padding: 4px;
+      background: #edf0f2;
+      border-radius: 4px;
+      font-size: 18px;
+    }
+    .ant-menu-item-selected {
+      color: black;
+    }
+  }
+}
+
+.drawerHeader {
+  :global {
+    .ant-image-img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+    }
+    .ant-image {
+      text-align: -webkit-center;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+enum SessionType {
+  R
+  P
+}
+
+enum Gender {
+  Female
+  Male
+  Custom
+}

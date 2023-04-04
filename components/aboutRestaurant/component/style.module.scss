@@ -1,0 +1,135 @@
+.feedBackForm {
+  :global {
+    .ant-btn-primary {
+      width: 100%;
+      border-color: var(--main);
+      background: var(--main);
+      border-radius: 10px;
+    }
+    .ant-form-item {
+      .ant-row {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.FeedBackConfirmDiv {
+  :global {
+    .ant-modal-content {
+      border-radius: 10px;
+    }
+  }
+}
+.draftType {
+  color: var(--main);
+}
+.nowPayCancelButton {
+  :global {
+    .ant-btn {
+      color: var(--main);
+      border-color: var(--main);
+      background: #fff;
+      width: 257px;
+    }
+
+    .ant-btn-lg {
+      border-radius: 10px;
+    }
+  }
+}
+
+.nowPayokButton {
+  :global {
+    .ant-btn {
+      color: white;
+      border-color: var(--main);
+      background: var(--main);
+      width: 257px;
+    }
+
+    .ant-btn-lg {
+      border-radius: 10px;
+    }
+  }
+}
+
+.feedBackForm {
+  :global {
+    .ant-input:placeholder-shown {
+      border-radius: 10px;
+    }
+  }
+}
+.facebookLogo {
+  margin-top: 4px;
+  color: #1b74e4;
+  font-size: 18px;
+}
+
+.orderHistoryRestaurant {
+  :global {
+    .ant-card {
+      border-radius: 10px;
+    }
+  }
+  .dateText {
+    color: '#5C616F';
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+@media (min-width: 740px) {
+  .ImageDesktop {
+    width: 50%;
+    height: 50%;
+    text-align: -webkit-center;
+  }
+}
+
+@media (min-width: 600px) {
+  .FeedBackClose {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .feedBackDesktopDesign {
+    :global {
+      .ant-image {
+        text-align: -webkit-center;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .feedBackDesktopDesign {
+    :global {
+      .ant-image {
+        text-align: -webkit-center;
+      }
+      .ant-result {
+        width: 100%;
+        padding: 48px 0px;
+        padding-bottom: 0px;
+      }
+    }
+  }
+}
+
+.neResultLogg {
+  :global {
+    .ant-image-img {
+      opacity: 0.3;
+    }
+    .ant-btn-primary {
+      border-radius: 10px;
+      background-color: var(--main);
+      border-color: var(--main);
+    }
+  }
+}

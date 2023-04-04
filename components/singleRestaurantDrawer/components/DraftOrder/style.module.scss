@@ -1,0 +1,31 @@
+.yourOrderText {
+  font-size: 16px;
+}
+.draftHeaderRow {
+  display: flex;
+  place-items: center;
+}
+.draftMoreOrder {
+  :global {
+    .ant-typography strong {
+      color: var(--main);
+    }
+    .anticon svg {
+      color: var(--main);
+    }
+  }
+}
+.foodMediumCard {
+  :global {
+    .ant-spin-nested-loading .ant-spin-container .ant-row > div .ant-col .ant-list-item {
+      margin: 0;
+    }
+    .ant-spin-nested-loading .ant-spin-container .ant-row {
+      margin: 0 !important;
+      padding: 0;
+    }
+    .ant-spin-nested-loading .ant-spin-container .ant-row > div .ant-col {
+      padding: 0 !important;
+    }
+  }
+}

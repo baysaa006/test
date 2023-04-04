@@ -1,0 +1,62 @@
+.searchInputDiv {
+  :global {
+    .ant-input-affix-wrapper {
+      border-radius: 10px;
+      background-color: #f6f7f8;
+    }
+    .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+      border-color: #e8ebee;
+    }
+    .ant-input-affix-wrapper-focused {
+      box-shadow: 0 0 0 2px #e8ebee;
+      background-color: #e8ebee;
+    }
+    .ant-input {
+      background-color: #f6f7f8;
+      width: 65vw;
+    }
+    .ant-input:focus {
+      background-color: #e8ebee;
+    }
+    .anticon.ant-input-clear-icon {
+      font-size: 18px;
+    }
+  }
+}
+
+.searchContent {
+  :global {
+    .ant-btn {
+      border-color: #e8ebee;
+      background-color: #e8ebee;
+    }
+    .ant-btn-icon-only {
+      border-radius: 10px;
+    }
+    .ant-list-item-meta {
+      display: flex;
+      flex: 1 1;
+      align-items: flex-start;
+      max-width: 100%;
+      place-items: center;
+    }
+  }
+}
+.searchNoIconDiv {
+  :global {
+    .ant-image-img {
+      opacity: 0.2;
+    }
+  }
+}
+
+.countButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--text-color) !important;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

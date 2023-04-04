@@ -1,0 +1,67 @@
+.searchInput {
+  :global {
+    .anticon svg {
+      font-size: 20px;
+      color: #999;
+    }
+  }
+}
+.mainFilterStyle {
+  :global {
+    .ant-btn {
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border-color: #eb6825;
+    }
+    .ant-btn::after {
+      background-color: #ffebe4;
+      .textStyle {
+        color: #eb6825 !important;
+      }
+    }
+  }
+}
+.textStyle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding-left: 6px;
+}
+.priceTextStyle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  margin-bottom: 6px;
+}
+
+.priceInputStyle {
+  :global {
+    .ant-input {
+      border-radius: 8px;
+      background: #e8ebee;
+      height: 64px;
+      font-size: 17px;
+    }
+    .ant-input::placeholder {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 24px;
+      color: #a7aab2;
+    }
+  }
+}
+.filterRowStyle {
+  :global {
+    .ant-btn:hover,
+    .ant-btn:focus {
+      background: var(--main) !important;
+    }
+  }
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 0%;
+}

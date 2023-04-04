@@ -1,0 +1,736 @@
+@import '../singleRestaurantFilterContainer/style.module.scss';
+
+.addRequestModal {
+  :global {
+    .ant-modal-content {
+      border-radius: 10px;
+    }
+    .ant-modal-body {
+      padding: 0px 16px;
+      .ant-form {
+        border-radius: 10px;
+        background-color: rgb(247, 247, 247);
+        padding: 10px 20px;
+        border: 1px solid rgb(213, 212, 212);
+        .ant-form-item {
+          margin: 0px;
+        }
+        .ant-form-item-control {
+          max-width: 100%;
+          border-radius: 10px;
+          .ant-input {
+            background-color: rgb(247, 247, 247);
+            border-radius: 10px;
+            border: none;
+            color: black;
+            font-size: 16px;
+          }
+          .ant-input:focus,
+          .ant-input-focused {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+    .ant-modal-header {
+      border: none;
+      .ant-modal-title {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+    .ant-modal-footer {
+      border: none;
+      padding: 20px 15px;
+      .ant-btn {
+        width: 100%;
+        border-radius: 10px;
+        min-height: 48px;
+        background-color: var(--main);
+        color: #f0f0f0;
+        &:hover {
+          box-shadow: none;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.price {
+  color: var(--main);
+}
+.addRequest {
+  justify-content: flex-start;
+  align-items: center;
+  :global {
+    .ant-btn {
+      margin-top: 5px;
+      border: none;
+      box-shadow: none;
+      padding: 0px 5px 0px 0px;
+      display: flex;
+      align-items: center;
+      height: 20px;
+      margin-top: 10px;
+      span {
+        white-space: nowrap;
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: gray;
+        font-size: 13px;
+      }
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+
+.timeText {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+}
+
+.priceText {
+  color: #cb2028;
+}
+.OrderFoodCardHide {
+  opacity: 0.8;
+  pointer-events: none;
+}
+.outOfStock {
+  opacity: 0.8;
+  font-size: smaller;
+  font-style: italic;
+  font-family: Lato;
+  color: red;
+}
+.orderFoodContainer {
+  width: 100%;
+}
+
+.activeOrderFoodContainer {
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+.orderFoodCard {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  :global {
+    .style_singleRestaurantTabs__UmMLK .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+      padding: 16px 0px 16px 0px;
+    }
+    .ant-card {
+      background-color: transparent;
+    }
+    .ant-card-bordered {
+      border: 1px solid white !important;
+    }
+  }
+}
+.orderFoodCard:last-child {
+  border-right: 1px solid #d6d3d3 !important;
+}
+.itemPrice {
+  font-weight: 700 !important;
+}
+.rankContent {
+  padding: 2px 10px;
+  position: absolute;
+  width: 100.5%;
+  top: 175px;
+  background-color: rgba(0, 0, 0, 0.2);
+  :global {
+    .anticon {
+      place-self: center;
+    }
+  }
+}
+
+.contentMeta {
+  :global {
+    .ant-card-meta-detail > div:not(:last-child) {
+      margin-bottom: 1px;
+    }
+  }
+}
+
+.listShopCardDetail {
+  width: 50%;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.listShopCardDetail:nth-child(2) {
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.listShopCardDetail:nth-child(3) {
+  width: 30%;
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (min-width: 750px) {
+  .cardRankContent {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: rgba(196, 192, 192, 0.5);
+    padding: 0px 5px;
+    border-radius: 0 !important;
+    color: white;
+  }
+  .countButton {
+    transition: 0.5s ease-in-out;
+    width: max-content;
+    border: 1px solid var(--text-color) !important;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0 !important;
+    :global {
+      .ant-btn-icon-only {
+        height: 10px;
+        border-radius: 4px;
+        box-shadow: none;
+        width: 100%;
+        border: none;
+        background: 'white';
+      }
+
+      .ant-btn-icon-only:nth-child(2) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .icons {
+    color: var(--text-color);
+  }
+  .counterIcons {
+    font-weight: bold;
+    color: var(--text-color);
+  }
+
+  .listShopCard {
+    display: flex;
+    flex-direction: row;
+    :global {
+      .ant-card-body {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+  .shopCard {
+    :global {
+      .ant-btn {
+        color: var(--main);
+        border-color: var(--main);
+        background: 'white';
+        width: 100%;
+      }
+    }
+  }
+
+  .shopCardDiv {
+    :global {
+      .ant-card {
+        border-radius: 5px;
+        width: 250px;
+      }
+      .ant-card-meta-title {
+        white-space: pre-wrap;
+        height: 35px;
+        overflow: auto;
+      }
+      .ant-card-body {
+        padding: 5px !important;
+      }
+
+      .ant-card-cover img {
+        border-radius: 5px 5px 0 0;
+      }
+      .ant-card-meta-detail > div:not(:last-child) {
+        display: inline-grid;
+        align-content: center;
+      }
+    }
+  }
+  .longDesc {
+    padding: 10px 0px;
+    font-weight: 300;
+    color: rgb(119, 121, 140);
+    height: 50px;
+    font-family: Italic, serif;
+    font-style: italic;
+    text-align: center;
+  }
+  .foodName {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Lato, sans-serif;
+    text-align: start;
+    color: #111;
+  }
+  .orderFoodCard {
+    width: 100%;
+    :global {
+      .ant-card {
+        border-radius: 0;
+        width: 100%;
+        line-height: 0.9715;
+      }
+
+      .ant-card-body {
+        width: 100%;
+        padding: 10px;
+      }
+      .ant-card-meta-title {
+        white-space: pre-wrap;
+        height: 35px;
+      }
+    }
+  }
+}
+
+.countButton {
+  transition: 0.5s ease-in-out;
+  width: max-content;
+  border: 1px solid var(--text-color) !important;
+  border-radius: 4px;
+  display: flex;
+  min-height: 30px;
+  min-width: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0 !important;
+  :global {
+    .ant-btn-icon-only {
+      height: 10px;
+      border-radius: 4px;
+      box-shadow: none;
+      width: 100%;
+      border: none;
+      background: 'white';
+    }
+    .icons {
+      color: var(--text-color);
+    }
+    .counterIcons {
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--text-color);
+    }
+    .ant-btn-icon-only:nth-child(2) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .orderFoodCard {
+    :global {
+      .ant-card {
+        width: 100%;
+        line-height: 0.9715;
+        border-radius: 0;
+      }
+      .ant-card-body {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding-left: 20px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        padding-right: 10px;
+      }
+      .ant-card-meta-title {
+        white-space: pre-wrap;
+        height: 35px;
+      }
+    }
+  }
+  .foodName {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Lato, sans-serif;
+    text-align: start;
+    color: #111;
+  }
+  .longDesc {
+    padding: 0px 0px;
+    font-weight: 300;
+    color: rgb(119, 121, 140);
+    height: 28px;
+    font-family: Italic, serif;
+    font-style: italic;
+    text-align: start;
+  }
+  .cardRankContent {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: rgba(196, 192, 192, 0.5);
+    padding: 0px 5px;
+    border-radius: 5px;
+    color: white;
+  }
+  .icons {
+    font-size: 18px;
+    color: var(--text-color);
+  }
+  .counterIcons {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  .counterIcons:nth-child(2) {
+    font-weight: 500;
+    color: var(--text-color);
+  }
+
+  .icons:nth-child(3) {
+    font-size: 12px;
+    color: var(--text-color);
+  }
+  .shoppingButton {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 4px;
+    border: 1px solid var(--text-color);
+  }
+
+  .countButton {
+    padding-right: 5px;
+    padding-left: 5px;
+    transition: 0.5s ease-in-out;
+    width: max-content;
+    min-height: 30px;
+    border: 1.5px solid #d6d3d3 !important;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    :global {
+      .ant-btn-icon-only {
+        width: 20px;
+        height: 10px;
+        border-radius: 4px;
+        box-shadow: none;
+        width: 100%;
+        border: none;
+        background: 'white';
+      }
+
+      .ant-btn-icon-only:nth-child(2) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .shopCard {
+    :global {
+      .ant-btn {
+        color: var(--main);
+        border-color: var(--main);
+        background: 'white';
+        width: 100%;
+      }
+    }
+    .priceRow {
+      display: flex;
+      justify-content: center !important;
+    }
+  }
+  .shopCardDiv {
+    :global {
+      .ant-card {
+        border-radius: 5px;
+        width: 160px;
+      }
+      .ant-card-body {
+        padding: 5px;
+      }
+      //   .ant-card-meta-title {
+      //     white-space: pre-wrap;
+      //     height: 35px;
+      //     overflow: auto;
+      //   }
+      .ant-card-cover img {
+        border-radius: 5px 5px 0 0;
+      }
+      .ant-card-meta-detail > div:not(:last-child) {
+        display: inline-grid;
+        align-content: center;
+      }
+    }
+  }
+}
+
+.shopCardDiv {
+  :global {
+    .ant-card {
+      border-radius: 5px;
+    }
+    .ant-card-cover img {
+      border-radius: 5px 5px 0 0;
+    }
+    .ant-card-meta-title {
+      white-space: pre-wrap;
+      height: 35px;
+      overflow: auto;
+    }
+  }
+}
+
+@media (min-width: 975px) {
+  .foodMediumCard {
+    :global {
+      .ant-card-body {
+        width: 100%;
+
+        border-radius: 10px;
+        .draftItemComment {
+          .ant-btn {
+            margin-top: 5px;
+            border: none;
+            box-shadow: none;
+            padding: 0px 5px 0px 0px;
+            display: flex;
+            align-items: center;
+            height: 10px;
+            span {
+              white-space: nowrap;
+              max-width: 150px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              color: gray;
+              font-size: 13px;
+            }
+            &:hover {
+              color: black;
+            }
+          }
+        }
+      }
+
+      .ant-row-space-between {
+        align-items: center;
+      }
+      .ant-image {
+        width: 40%;
+        height: 100%;
+      }
+
+      .ant-image-img {
+        display: block;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .ant-card-bordered {
+        border: 1px solid white;
+        border-radius: 10px;
+      }
+
+      .ant-col {
+        // place-self: center;
+      }
+
+      .ant-image-img {
+        border-radius: 10px;
+      }
+    }
+  }
+  .shoppingButton {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 4px;
+    border: 1px solid var(--text-color);
+  }
+  .icons {
+    font-size: 18px;
+    color: var(--text-color);
+  }
+
+  .counterIcons {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+}
+.countersDiv {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 85px;
+  justify-content: space-around;
+}
+
+.foodMediumCard {
+  border-top: 1px solid #d6d3d3;
+  :global {
+    .ant-card-body {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      .draftItemComment {
+        .ant-btn {
+          margin-top: 5px;
+          border: none;
+          box-shadow: none;
+          padding: 0px 5px 0px 0px;
+          display: flex;
+          align-items: center;
+          height: 10px;
+          span {
+            white-space: nowrap;
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: gray;
+            font-size: 13px;
+          }
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+
+    .ant-image {
+      width: 43%;
+    }
+
+    .ant-image-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .ant-card-bordered {
+      border: 1px solid white !important;
+      border-radius: 10px;
+    }
+    .ant-col {
+      // place-self: center;
+    }
+
+    .ant-image-img {
+      border-radius: 10px;
+    }
+  }
+}
+.shoppingButton {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 4px;
+  border: 1px solid var(--text-color);
+}
+.foodHostoryCard {
+  margin-bottom: 10px;
+  :global {
+    .ant-card-body {
+      padding: 0px 0px 0px 0px;
+      .draftItemComment {
+        .ant-btn {
+          margin-top: 5px;
+          border: none;
+          box-shadow: none;
+          padding: 0px 5px 0px 0px;
+          display: flex;
+          align-items: center;
+          height: 10px;
+          span {
+            white-space: nowrap;
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: gray;
+            font-size: 13px;
+          }
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+
+    .ant-image {
+      place-self: center;
+      width: 96px;
+      // height: 66px;
+    }
+
+    .ant-image-img {
+      display: block;
+      width: 110px;
+    }
+
+    .ant-card-bordered {
+      // border: 1px solid #f0f0f0;
+      border-radius: 10px;
+    }
+
+    .ant-col {
+      // place-self: center;
+    }
+
+    .ant-image-img {
+      border-radius: 10px;
+    }
+  }
+}
+.shoppingButton {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 4px;
+  border: 1px solid var(--text-color);
+}
+.draftOrderCountButtonSpace {
+  display: flex;
+  place-self: center;
+  :global {
+    .ant-space {
+      text-align: center;
+    }
+  }
+}
+
+.input {
+  text-align: center !important;
+  padding: 0 !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  width: 30px !important;
+  height: 30px !important;
+  border: 0 !important;
+}
+.input::-webkit-inner-spin-button {
+  display: none;
+}

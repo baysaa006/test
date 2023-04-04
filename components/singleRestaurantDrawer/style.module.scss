@@ -1,0 +1,161 @@
+.singleRestaurantDrawer {
+  height: 400px;
+  width: 360px;
+  overflow: scroll;
+}
+
+.drawer {
+  :global {
+    .ant-drawer-header {
+      border: none;
+    }
+  }
+}
+.styleModal {
+  :global {
+    .ant-modal-content {
+      border-radius: 10px;
+    }
+    .ant-card-body {
+      padding: 8px;
+    }
+    .ant-drawer-header {
+      position: absolute;
+      z-index: 1;
+      top: 0px;
+      //   width: 100%;
+    }
+    .ant-drawer-footer {
+      box-shadow: 0 10px 37px rgb(0 0 0 / 20%);
+    }
+  }
+}
+
+.closeButton {
+  position: absolute;
+}
+.confirmOrder {
+  :global {
+    .ant-btn,
+    .ant-btn:active,
+    .ant-btn:focus {
+      width: 100%;
+      border-radius: 8px;
+      background: var(--main);
+    }
+  }
+}
+.draftButton {
+  :global {
+    .ant-btn {
+      width: 100%;
+      border-color: var(--main);
+      background: var(--main);
+      border-radius: 10px;
+      height: 45px;
+    }
+  }
+
+  .text {
+    color: white;
+    padding: 5px;
+  }
+  .totalText {
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    background: var(--main);
+  }
+}
+
+.draftDisableButton {
+  :global {
+    .ant-btn {
+      width: 100%;
+      border-color: #e8ebee;
+      background: #e8ebee;
+      border-radius: 10px;
+      height: 45px;
+    }
+  }
+
+  .text {
+    color: #5c616f;
+    padding: 5px;
+  }
+  .totalText {
+    color: #5c616f;
+    padding: 5px;
+    border-radius: 10px;
+    background: #e8ebee;
+  }
+}
+
+//recommendations
+
+.mobileCard {
+  :global {
+    .ant-spin-nested-loading {
+      .ant-spin-container {
+        .ant-list-items {
+          display: flex !important;
+          flex-direction: row !important;
+          overflow: scroll !important;
+          gap: 5px !important;
+        }
+      }
+    }
+  }
+}
+
+.shopCardDiv {
+  width: 120px;
+  :global {
+    .ant-card {
+      border-radius: 10px;
+      .ant-card-body {
+        padding-top: 10px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 10px;
+        height: 70px;
+        width: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .ant-card-meta:nth-child(1) {
+          display: none;
+        }
+        .ant-card-meta:nth-child(3) {
+          display: none;
+        }
+        .styles_priceRow__x7aeL {
+          display: none;
+        }
+      }
+      .ant-divider {
+        display: none;
+      }
+
+      .styles_cardRankContent__ZkIJP {
+        display: none;
+      }
+      .ant-card-cover {
+        margin: 0;
+        width: 120px;
+        height: auto;
+        .ant-image {
+          .ant-image-img {
+            border-radius: 10px;
+            height: 100%;
+            margin: 0;
+          }
+          height: 100%;
+        }
+      }
+    }
+  }
+  .ant-card-cover img {
+    border-radius: 5px;
+  }
+}

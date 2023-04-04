@@ -1,0 +1,81 @@
+.webTypeModals {
+  :global {
+    .ant-modal-content {
+      border-radius: 10px;
+    }
+  }
+}
+
+.carouselStyling {
+  :global {
+    .ant-carousel .slick-dots li.slick-active button {
+      background: var(--main);
+    }
+    .ant-carousel .slick-dots-bottom {
+      bottom: -25px;
+    }
+    .ant-carousel .slick-dots li button {
+      width: 10px;
+      height: 10px;
+      border-radius: 18px;
+    }
+    .ant-carousel .slick-dots li button {
+      background: #c7c5c5;
+    }
+  }
+}
+
+.title {
+  margin-bottom: 10px;
+  :global {
+    .ant-typography strong {
+      font-size: 20px;
+    }
+  }
+}
+
+.description {
+  :global {
+    .ant-typography {
+      color: #5c616f;
+      font-size: 15px;
+    }
+  }
+}
+
+.nowPayCancelButton {
+  :global {
+    .ant-btn {
+      color: var(--main);
+      border-color: var(--main);
+      background: #fff;
+      width: 257px;
+    }
+
+    .ant-btn-lg {
+      border-radius: 10px;
+    }
+  }
+}
+.nowPayokButton {
+  :global {
+    .ant-btn {
+      color: white;
+      border-color: var(--main);
+      background: var(--main);
+      width: 257px;
+    }
+
+    .ant-btn-lg {
+      border-radius: 10px;
+    }
+  }
+}
+.loginButtonDiv {
+  :global {
+    .ant-space-vertical {
+      position: absolute;
+      bottom: 150px;
+    }
+  }
+}

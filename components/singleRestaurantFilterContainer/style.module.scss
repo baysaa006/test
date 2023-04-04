@@ -1,0 +1,1238 @@
+.singleRestaurantFilterContainer {
+  transform: none;
+  margin-top: 0px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  margin-bottom: 0px;
+}
+.RestaurantTabs {
+  width: 50%;
+}
+@media screen and (max-width: 1200px) {
+  .RestaurantTabs {
+    width: 100%;
+  }
+}
+
+.shopCardDiv {
+  :global {
+    .ant-card {
+      border-radius: 5px;
+    }
+    .ant-card-cover img {
+      border-radius: 5px 5px 5px 5px;
+    }
+  }
+}
+
+.webCard {
+  display: inline;
+  :global {
+    .ant-row-center {
+      justify-content: start;
+    }
+  }
+}
+
+.restaurantCarousel {
+  display: inline;
+  margin-bottom: 10px;
+  :global {
+    .ant-typography strong {
+      font-size: 20px;
+      padding-bottom: 5px;
+    }
+    .react-multi-carousel-item.react-multi-carousel-item--active.image-item::marker {
+      display: none;
+    }
+    ul.ba {
+      list-style-type: none;
+    }
+    ::marker {
+      font-size: 0px;
+    }
+    .react-multiple-carousel__arrow {
+      background: rgba(196, 192, 192, 0.5);
+      min-width: 30px;
+      min-height: 30px;
+    }
+
+    .ant-image-img {
+      border-radius: 10px;
+    }
+    .react-multiple-carousel__arrow::before {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .bigCarousel {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .bigCarousel {
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .modileCard {
+    display: none;
+    :global {
+      .ant-list-split .ant-list-header {
+        position: absolute;
+        top: 30%;
+        width: 100%;
+      }
+      .react-multi-carousel-list {
+        display: none;
+        height: 120px;
+        border-radius: 5px;
+      }
+    }
+    .carouselSpace {
+      display: none;
+    }
+
+    .smallCarousel {
+      display: none;
+      position: absolute;
+      width: 100%;
+      left: 0px;
+      margin-bottom: 10px;
+      :global {
+        .ant-typography strong {
+          font-size: 20px;
+          padding-bottom: 5px;
+        }
+        .react-multi-carousel-item.react-multi-carousel-item--active.image-item::marker {
+          display: none;
+        }
+        ul.ba {
+          list-style-type: none;
+        }
+        ::marker {
+          font-size: 0px;
+        }
+        .react-multiple-carousel__arrow {
+          background: rgba(196, 192, 192, 0.5);
+          min-width: 30px;
+          min-height: 30px;
+        }
+
+        .ant-image-img {
+          border-radius: 10px;
+        }
+        .react-multiple-carousel__arrow::before {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .webCard {
+  }
+  .shopCardDiv {
+    width: 280px;
+    :global {
+      .ant-col {
+        max-width: none;
+      }
+      .ant-list-grid .ant-col > .ant-list-item {
+        max-width: none;
+      }
+      .ant-card {
+        border-radius: 5px;
+        width: 100%;
+      }
+      .ant-card-body {
+        padding: 10px;
+      }
+      .ant-card-meta-title {
+        height: 32px;
+        text-overflow: ellipsis;
+        text-align: -webkit-center;
+      }
+      .ant-card-cover img {
+        border-radius: 5px 5px 0 0;
+      }
+      .ant-card-meta-detail > div:not(:last-child) {
+        display: inline-grid;
+        align-content: center;
+      }
+    }
+  }
+
+  .singleRestaurantTabs {
+    width: 100% !important;
+    :global {
+      .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+        padding: 16px;
+        background: transparent;
+      }
+      .ant-tabs-card > .ant-tabs-nav::before {
+        display: none;
+      }
+
+      .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap,
+      .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-wrap {
+        background: white;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      .ant-tabs-card .ant-tabs-tab,
+      [data-theme='compact'] .card-container > .ant-tabs-card .ant-tabs-tab {
+        background: transparent;
+        border-color: transparent;
+      }
+      .ant-tabs-card .ant-tabs-tab-active,
+      [data-theme='compact'] .card-container > .ant-tabs-card .ant-tabs-tab-active {
+        background: #fff;
+        padding: 5px 10px;
+      }
+      .ant-tabs-card .ant-tabs-tab {
+        background: transparent;
+        border-color: transparent;
+      }
+      .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+        background: transparent;
+      }
+      .ant-tabs-card .ant-tabs-tab-active {
+        background: var(--main);
+      }
+      .ant-tabs-top > .ant-tabs-nav,
+      .ant-tabs-bottom > .ant-tabs-nav,
+      .ant-tabs-top > div > .ant-tabs-nav,
+      .ant-tabs-bottom > div > .ant-tabs-nav {
+        margin: 0px 22px 0px 15px;
+        // display: none;
+      }
+      .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active,
+      .ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab-active {
+        color: white;
+      }
+      .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+        color: white;
+      }
+
+      .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab-active,
+      .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab-active {
+        border-radius: 5px 5px 5px 5px;
+      }
+      .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+      .ant-tabs-card.ant-tabs-bottom > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+      .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+      .ant-tabs-card.ant-tabs-bottom > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab {
+        margin-left: 8px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .modileCard {
+    display: inline;
+    :global {
+      .react-multi-carousel-list {
+        height: 120px;
+        border-radius: 5px;
+      }
+      .ant-list {
+        padding: 0;
+        .ant-spin-nested-loading {
+          .ant-spin-container {
+            .ant-list-items {
+              gap: 0 !important;
+            }
+          }
+        }
+      }
+    }
+    .carouselSpace {
+      height: 140px;
+    }
+    .smallCarousel {
+      position: absolute;
+      width: 100%;
+      left: 0px;
+      margin-bottom: 10px;
+      :global {
+        .ant-typography strong {
+          font-size: 20px;
+          padding-bottom: 5px;
+        }
+        .react-multi-carousel-item.react-multi-carousel-item--active.image-item::marker {
+          display: none;
+        }
+        ul.ba {
+          list-style-type: none;
+        }
+        ::marker {
+          font-size: 0px;
+        }
+        .react-multiple-carousel__arrow {
+          background: rgba(196, 192, 192, 0.5);
+          min-width: 30px;
+          min-height: 30px;
+        }
+
+        .ant-image-img {
+          border-radius: 10px;
+        }
+        .react-multiple-carousel__arrow::before {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .webCard {
+    display: none;
+  }
+  .shopCardDiv {
+    :global {
+      .ant-col {
+        max-width: none;
+      }
+      .ant-list-grid .ant-col > .ant-list-item {
+        max-width: none;
+      }
+      .ant-card {
+        border-radius: 5px;
+        width: 100%;
+      }
+      .ant-card-body {
+        display: flex;
+        flex-direction: row;
+        padding: 8px;
+      }
+      .ant-card-meta-title {
+        height: 37px;
+        text-overflow: ellipsis;
+        text-align: -webkit-center;
+      }
+      .ant-card-cover img {
+        border-radius: 5px 5px 5px 5px;
+      }
+      .ant-card-meta-detail > div:not(:last-child) {
+        display: inline-grid;
+        align-content: center;
+      }
+    }
+  }
+
+  .singleRestaurantTabs {
+    width: 100% !important;
+
+    :global {
+      .ant-tabs > .ant-tabs-nav,
+      .ant-tabs > div > .ant-tabs-nav {
+        display: none;
+      }
+
+      .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+        padding: 0px;
+        background: transparent;
+      }
+      .ant-tabs-card > .ant-tabs-nav::before {
+        display: none;
+      }
+
+      .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap,
+      .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-wrap {
+        background: white;
+        padding: 5px;
+      }
+      .ant-tabs-card .ant-tabs-tab,
+      [data-theme='compact'] .card-container > .ant-tabs-card .ant-tabs-tab {
+        background: transparent;
+        border-color: transparent;
+      }
+      .ant-tabs-card .ant-tabs-tab-active,
+      [data-theme='compact'] .card-container > .ant-tabs-card .ant-tabs-tab-active {
+        background: #fff;
+        padding: 5px 10px;
+      }
+      .ant-tabs-card .ant-tabs-tab {
+        background: transparent;
+        border-color: transparent;
+      }
+      .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+        background: transparent;
+      }
+      .ant-tabs-card .ant-tabs-tab-active {
+        background: var(--main);
+      }
+      .ant-tabs-top > .ant-tabs-nav,
+      .ant-tabs-bottom > .ant-tabs-nav,
+      .ant-tabs-top > div > .ant-tabs-nav,
+      .ant-tabs-bottom > div > .ant-tabs-nav {
+        margin: 0px 0px 0px 0px;
+      }
+      .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active,
+      .ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab-active {
+        color: white;
+      }
+      .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+        color: white;
+      }
+
+      .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab-active,
+      .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab-active {
+        border-radius: 5px 5px 5px 5px;
+      }
+      .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+      .ant-tabs-card.ant-tabs-bottom > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+      .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+      .ant-tabs-card.ant-tabs-bottom > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab {
+        margin-left: 8px;
+        border-radius: 5px;
+      }
+    }
+
+    .bannerCarousel {
+      :global {
+        .ant-carousel .slick-slide img {
+          border-radius: 10px;
+        }
+      }
+
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .buttonAffix {
+    display: none;
+    bottom: 140;
+    right: 35;
+    z-index: 1;
+  }
+
+  .navBarAffix {
+    display: none;
+    bottom: 140;
+    right: 35;
+    z-index: 1;
+  }
+  .orderCol {
+    display: inline;
+  }
+  .shopAffixOne {
+    position: fixed;
+    display: none;
+    bottom: 140;
+    right: 35;
+    :global {
+      .ant-btn-icon-only.ant-btn-lg {
+        width: 50px;
+        height: 50px;
+        padding: 4.9px 0;
+        font-size: 18px;
+        border-radius: 12px;
+      }
+      .ant-btn > .anticon + span,
+      .ant-btn > span + .anticon {
+        font-size: 19px;
+      }
+      .ant-btn {
+        color: white;
+        border-color: var(--main);
+        background: var(--main);
+        height: 60px;
+      }
+      .ant-btn:hover,
+      .ant-btn:focus {
+        color: white;
+        border-color: var(--main);
+      }
+      .ant-badge-count,
+      .ant-badge-dot,
+      .ant-badge .ant-scroll-number-custom-component {
+        top: 5px;
+        right: 8px;
+      }
+    }
+    .countText {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 1px 6px 1px 6px;
+      border-radius: 5px;
+    }
+  }
+
+  .navAffixone {
+    position: fixed;
+    display: none;
+    bottom: 140;
+    right: 35;
+    :global {
+      .ant-btn-icon-only.ant-btn-lg {
+        width: 50px;
+        height: 50px;
+        padding: 4.9px 0;
+        font-size: 18px;
+        border-radius: 12px;
+      }
+      .ant-btn > .anticon + span,
+      .ant-btn > span + .anticon {
+        font-size: 19px;
+      }
+      .ant-btn {
+        color: white;
+        border-color: var(--main);
+        background: var(--main);
+        height: 60px;
+      }
+      .ant-btn:hover,
+      .ant-btn:focus {
+        color: white;
+        border-color: var(--main);
+      }
+      .ant-badge-count,
+      .ant-badge-dot,
+      .ant-badge .ant-scroll-number-custom-component {
+        top: 5px;
+        right: 8px;
+      }
+    }
+
+    .countText {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 1px 6px 1px 6px;
+      border-radius: 5px;
+    }
+  }
+
+  .shopAffix {
+    position: fixed;
+    bottom: 140;
+    right: 35;
+    :global {
+      .ant-btn-icon-only.ant-btn-lg {
+        width: 50px;
+        height: 50px;
+        padding: 4.9px 0;
+        font-size: 18px;
+        border-radius: 12px;
+      }
+      .ant-btn > .anticon + span,
+      .ant-btn > span + .anticon {
+        font-size: 19px;
+      }
+      .ant-btn {
+        color: white;
+        border-color: var(--main);
+        background: var(--main);
+        height: 60px;
+      }
+      .ant-btn:hover,
+      .ant-btn:focus {
+        color: white;
+        border-color: var(--main);
+      }
+      .ant-badge-count,
+      .ant-badge-dot,
+      .ant-badge .ant-scroll-number-custom-component {
+        top: 5px;
+        right: 8px;
+      }
+    }
+    .countText {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 1px 6px 1px 6px;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .orderCol {
+    display: none;
+  }
+  .buttonAffix {
+    position: fixed;
+    bottom: 140;
+    right: 35;
+    z-index: 1;
+  }
+
+  .navBarAffix {
+    position: fixed;
+    bottom: 140;
+    right: 35;
+    z-index: 1;
+  }
+  .shopAffixOne {
+    position: fixed;
+    bottom: 50px;
+    :global {
+      .ant-btn-icon-only.ant-btn-lg {
+        width: 50px;
+        height: 50px;
+        padding: 4.9px 0;
+        font-size: 18px;
+        border-radius: 12px;
+      }
+      .ant-btn > .anticon + span,
+      .ant-btn > span + .anticon {
+        font-size: 19px;
+      }
+      .ant-typography {
+        font-size: 19px;
+        color: white;
+        margin-bottom: 1px;
+      }
+      .ant-btn .anticon {
+        color: white;
+        font-size: 25px;
+      }
+      .ant-btn {
+        color: white;
+        border-color: var(--main);
+        background: var(--main);
+        height: 55px;
+        width: 80%;
+        border-radius: 10px;
+      }
+      .ant-btn:hover,
+      .ant-btn:focus {
+        color: white;
+        border-color: var(--main);
+      }
+      .ant-badge-count,
+      .ant-badge-dot,
+      .ant-badge .ant-scroll-number-custom-component {
+        top: 5px;
+        right: 8px;
+      }
+    }
+    .countText {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 1px 6px 1px 6px;
+      border-radius: 5px;
+    }
+  }
+
+  .navAffixone {
+    :global {
+      .ant-space {
+        cursor: pointer;
+        display: flex;
+        text-align: center;
+      }
+      .ant-card-bordered {
+        border-radius: 15px 15px 0px 0px;
+        border: none;
+        font-size: 12px;
+      }
+      //
+      .ant-typography {
+        font-size: 12px;
+        font-weight: 600, Semi Bold;
+        color: #5c616f;
+      }
+      .ant-card {
+        background-color: #ffffffe8;
+        width: 100%;
+      }
+      .ant-card-body {
+        padding: 0%;
+        .ant-row {
+          flex-flow: row;
+          justify-content: space-around;
+        }
+      }
+      .ant-col {
+        border: none;
+        padding-bottom: 3px;
+        padding-top: 7px;
+        cursor: pointer;
+        margin: 0%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 11px;
+      }
+      .ant-col.active,
+      .ant-col:hover {
+        .ant-image-img {
+          filter: invert(11%) sepia(82%) saturate(6028%) hue-rotate(223deg) brightness(98%) contrast(97%);
+        }
+        color: var(--main);
+      }
+      .ant-scroll-number {
+        background: var(--main);
+        position: absolute;
+        bottom: 10px;
+        left: 5px;
+      }
+    }
+    .countText {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 1px 6px 1px 6px;
+      border-radius: 5px;
+    }
+  }
+
+  .bellImgContainer {
+    position: absolute;
+    text-align-last: end;
+    right: 10px;
+    bottom: 65px;
+    cursor: pointer;
+    :global {
+      .ant-badge-status-text {
+        display: none;
+      }
+      .ant-badge-status-dot {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        right: 0px;
+      }
+      .ant-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .shopAffix {
+    position: fixed;
+    bottom: 140;
+    display: none;
+    right: 35;
+    :global {
+      .ant-btn-icon-only.ant-btn-lg {
+        width: 50px;
+        height: 50px;
+        padding: 4.9px 0;
+        font-size: 18px;
+        border-radius: 12px;
+      }
+      .ant-btn > .anticon + span,
+      .ant-btn > span + .anticon {
+        font-size: 14px;
+      }
+      .ant-btn {
+        color: white;
+        border-color: var(--main);
+        background: var(--main);
+      }
+      .ant-btn:hover,
+      .ant-btn:focus {
+        color: white;
+        border-color: var(--main);
+      }
+      .ant-badge-count,
+      .ant-badge-dot,
+      .ant-badge .ant-scroll-number-custom-component {
+        top: 5px;
+        right: 8px;
+      }
+    }
+    .countText {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 1px 6px 1px 6px;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .categoriesDiv {
+    overflow: auto;
+    width: 350px;
+    white-space: nowrap;
+    display: none;
+    .radioButtonDiv {
+      border-radius: 8px;
+      background: var(--main);
+      height: 35px;
+    }
+    :global {
+      .ant-radio-group {
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+      .ant-radio-button-wrapper {
+        border: 1px solid #d9d9d9;
+        border-radius: 10px;
+        color: #5c616f;
+      }
+      .ant-radio-button-wrapper:not(:first-child)::before {
+        display: none;
+      }
+
+      .ant-radio-button-wrapper-checked:not(
+          [class*=' ant-radio-button-wrapper-disabled']
+        ).ant-radio-button-wrapper:first-child {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+    }
+  }
+
+  .subCategoriesDiv {
+    overflow: auto;
+    white-space: nowrap;
+    width: 100vw;
+    display: none;
+    :global {
+      .ant-radio-group {
+        background: white;
+        padding: 0px 0px 10px 5px;
+        border-radius: 0px;
+      }
+      .ant-radio-group-large .ant-radio-button-wrapper {
+        font-size: 14px;
+        font-weight: normal;
+      }
+      .ant-radio-button-wrapper:first-child:last-child {
+        border-radius: 10px;
+        line-height: 32px;
+        height: 35px;
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+      .ant-radio-button-wrapper {
+        border: 1px solid #d9d9d9;
+        border-radius: 10px;
+        color: #5c616f;
+        background: #e8ebee;
+      }
+      .ant-radio-button-wrapper:not(:first-child)::before {
+        display: none;
+      }
+      .ant-radio-button-wrapper-checked:not(
+          [class*=' ant-radio-button-wrapper-disabled']
+        ).ant-radio-button-wrapper:first-child {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+    }
+  }
+}
+
+.drawerDiv {
+  min-height: calc(100vh - 105px);
+  background: #fff;
+  :global {
+    .ant-drawer-close {
+      font-size: 25px;
+    }
+    .ant-btn {
+      // font-family: $myFont;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .categoriesDiv {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100vw;
+    height: 70px;
+    .radioButtonDiv {
+      border-radius: 8px;
+      height: 55px;
+    }
+    .radioButtonCategory {
+      margin: 6px;
+      height: 76%;
+    }
+    :global {
+      .ant-radio-group {
+        padding: 8px 0px 8px 5px;
+        border-radius: 0px;
+        .ant-space-item {
+          // font-family: 'Comfortaa', cursive;
+          // font-family: $myFont;
+          font-weight: 500;
+        }
+      }
+      .ant-radio-button-wrapper:first-child:last-child {
+        font-size: 18px;
+      }
+      .ant-radio-group-large .ant-radio-button-wrapper {
+        font-size: 14px;
+        font-weight: normal;
+      }
+      .ant-radio-button-wrapper:first-child:last-child {
+        border-radius: 5px;
+        background-color: var(--main);
+
+        line-height: 32px;
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+      .ant-radio-button-wrapper {
+        border-radius: 10px;
+        color: #5c616f;
+      }
+      .ant-radio-button-wrapper:not(:first-child)::before {
+        display: none;
+      }
+      .ant-radio-button-wrapper-checked:not(
+          [class*=' ant-radio-button-wrapper-disabled']
+        ).ant-radio-button-wrapper:first-child {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+        box-shadow: 0 0 0 0px #e6f7ff;
+      }
+    }
+  }
+
+  .subCategoriesDiv {
+    overflow: auto;
+    white-space: nowrap;
+    width: 100vw;
+    .subRadioButtonDiv {
+      border-radius: 7px;
+      background: var(--main);
+      height: 55px;
+    }
+    .subRadioButtonCategory {
+      background-color: var(--main);
+      margin: 6px;
+      height: 76%;
+    }
+    :global {
+      .ant-radio-group {
+        background: white;
+        padding: 0px 0px 10px 5px;
+        border-radius: 0px;
+      }
+      .ant-radio-group-large .ant-radio-button-wrapper {
+        font-size: 14px;
+        font-weight: normal;
+      }
+      .ant-radio-button-wrapper:first-child:last-child {
+        font-size: 18px;
+      }
+      .ant-radio-button-wrapper:first-child:last-child {
+        border-radius: 5px;
+        line-height: 32px;
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+      .ant-radio-button-wrapper {
+        border: 1px solid #d9d9d9;
+        border-radius: 10px;
+        color: #5c616f;
+        background: #e8ebee;
+      }
+      .ant-radio-button-wrapper:not(:first-child)::before {
+        display: none;
+      }
+      .ant-radio-button-wrapper-checked:not(
+          [class*=' ant-radio-button-wrapper-disabled']
+        ).ant-radio-button-wrapper:first-child {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+        box-shadow: 0 0 0 0px #e6f7ff;
+      }
+    }
+  }
+}
+
+@media (max-width: 781px) {
+  .shopAffixOne {
+    position: fixed;
+    bottom: 55px;
+    :global {
+      .ant-row-center {
+        justify-content: flex-start;
+      }
+      .ant-btn-icon-only.ant-btn-lg {
+        width: 50px;
+        height: 50px;
+        padding: 4.9px 0;
+        font-size: 18px;
+        border-radius: 12px;
+      }
+      .ant-btn > .anticon + span,
+      .ant-btn > span + .anticon {
+        font-size: 19px;
+      }
+      .ant-typography {
+        font-size: 14px;
+        color: white;
+      }
+      .ant-btn .anticon {
+        color: white;
+        font-size: 19px;
+      }
+      .ant-btn {
+        color: white;
+        background: var(--main);
+        height: 45px;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .ant-btn:hover,
+      .ant-btn:focus {
+        color: white;
+        border-color: #fff !important;
+      }
+      .ant-btn::selection {
+        color: white;
+        border-color: #fff;
+      }
+      .ant-badge-count,
+      .ant-badge-dot,
+      .ant-badge .ant-scroll-number-custom-component {
+        top: 5px;
+        right: 8px;
+      }
+    }
+    .countText {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 1px 6px 1px 6px;
+      border-radius: 5px;
+    }
+  }
+  .categoriesDiv {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: white;
+    width: 100vw;
+    height: 50px;
+
+    .radioButtonDiv {
+      background: var(--main);
+      border-radius: 8px;
+
+      height: 35px;
+    }
+    .radioButtonCategory {
+      background-color: var(--main);
+
+      margin: 4px;
+      height: 76%;
+    }
+
+    :global {
+      .ant-radio-group {
+        background: white;
+        padding: 8px 0px 8px 5px;
+        border-radius: 0px;
+      }
+      .ant-radio-group-large .ant-radio-button-wrapper {
+        font-size: 14px;
+        font-weight: normal;
+      }
+
+      .ant-radio-button-wrapper:first-child:last-child {
+        border-radius: 5px;
+        line-height: 32px;
+      }
+      .ant-radio-button-wrapper:first-child:last-child {
+        border-color: var(--main);
+        font-size: 14px;
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active {
+        color: #fff;
+        border-color: #fff;
+        background: var(--main);
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+        color: #fff;
+        border-color: #fff;
+        background: var(--main);
+      }
+      .ant-radio-button-wrapper {
+        border-radius: 10px;
+        color: #5c616f;
+        background: var(--main);
+      }
+      .ant-radio-button-wrapper:not(:first-child)::before {
+        display: none;
+      }
+      .ant-radio-button-wrapper-checked:not(
+          [class*=' ant-radio-button-wrapper-disabled']
+        ).ant-radio-button-wrapper:first-child {
+        color: #fff;
+        background: var(--main);
+        border-color: #fff;
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+        box-shadow: 0 0 0 0px #e6f7ff;
+      }
+    }
+  }
+
+  .subCategoriesDiv {
+    overflow: auto;
+    white-space: nowrap;
+    width: 100vw;
+    .subRadioButtonDiv {
+      height: 35px;
+    }
+    .subRadioButtonCategory {
+      margin: 4px;
+      height: 76%;
+    }
+    :global {
+      .ant-radio-group {
+        background: white;
+        padding: 0px 0px 10px 5px;
+        border-radius: 0px;
+      }
+      .ant-radio-group-large .ant-radio-button-wrapper {
+        font-size: 14px;
+        font-weight: normal;
+      }
+      .ant-radio-button-wrapper:first-child:last-child {
+        font-size: 14px;
+      }
+      .ant-radio-button-wrapper:first-child:last-child {
+        border-radius: 5px;
+        line-height: 32px;
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+      .ant-radio-button-wrapper {
+        border: 1px solid #d9d9d9;
+        border-radius: 10px;
+        color: #5c616f;
+        background: #e8ebee;
+      }
+      .ant-radio-button-wrapper:not(:first-child)::before {
+        display: none;
+      }
+      .ant-radio-button-wrapper-checked:not(
+          [class*=' ant-radio-button-wrapper-disabled']
+        ).ant-radio-button-wrapper:first-child {
+        color: #fff;
+        background: var(--main);
+        border-color: var(--main);
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+        box-shadow: 0 0 0 0px #e6f7ff;
+      }
+    }
+  }
+}
+
+//tabs none
+
+.noDataImage {
+  :global {
+    .ant-image-img {
+      opacity: 0.1;
+    }
+  }
+}
+//switch buttons
+@media (min-width: 781px) {
+  .switch {
+    top: 20%;
+  }
+  .on {
+    font-size: 50px;
+  }
+}
+.switch {
+  color: #77798c;
+  z-index: 50;
+  top: 10%;
+  left: 0;
+  position: absolute;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  padding: 0.2rem;
+  width: max-content;
+  background-color: #fff;
+}
+.spacer {
+  width: 20px;
+}
+.on {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  font-size: 22px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+}
+.list {
+  color: #5c616f;
+  :global {
+    .ant-spin-nested-loading .ant-spin-container .ant-list-items .ant-list-item {
+      padding: 0px;
+    }
+  }
+}

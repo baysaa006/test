@@ -1,0 +1,49 @@
+.transactionRow {
+  :global {
+    .ant-card {
+      background: transparent;
+    }
+    .ant-card-body {
+      padding: 0px;
+    }
+    .ant-card-bordered {
+      border: 1px solid transparent;
+    }
+
+    .ant-card-bordered .ant-card-cover {
+      text-align: -webkit-center;
+    }
+  }
+}
+
+.submitButtom {
+  :global {
+    .ant-btn-lg {
+      height: 49px;
+      width: 300px;
+    }
+  }
+}
+
+.noticationAlert {
+  :global {
+  }
+}
+
+@media (min-width: 1200px) {
+  .mobileBank {
+    display: none;
+  }
+  .webQr {
+    display: inline;
+  }
+}
+
+@media (max-width: 1200px) {
+  .mobileBank {
+    display: inline;
+  }
+  .webQr {
+    display: none;
+  }
+}

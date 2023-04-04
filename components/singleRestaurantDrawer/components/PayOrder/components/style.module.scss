@@ -1,0 +1,939 @@
+.orderType {
+  :global {
+    .ant-typography strong {
+      font-size: 15px;
+    }
+  }
+}
+
+.customerInformationHeader {
+  margin-bottom: 0px;
+  :global {
+    .ant-typography strong {
+      font-size: 15px !important ;
+      color: black;
+    }
+  }
+}
+
+.orderTypeRadioButton {
+  :global {
+    .ant-radio-group {
+      width: 100%;
+    }
+    .ant-radio-wrapper {
+      width: 100%;
+    }
+    .ant-radio {
+      display: none;
+      position: absolute;
+      right: 0px;
+      top: 10px;
+    }
+    .ant-radio-wrapper:hover .ant-radio,
+    .ant-radio:hover .ant-radio-inner,
+    .ant-radio-input:focus + .ant-radio-inner {
+      border-color: var(--main);
+    }
+    .ant-radio-checked .ant-radio-inner {
+      border-color: var(--main);
+    }
+    .ant-radio-inner::after {
+      background-color: var(--main);
+    }
+    .ant-radio-checked::after {
+      border: 1px solid var(--main);
+    }
+  }
+  .radioText {
+    :global {
+      .ant-typography {
+        font-weight: normal !important;
+      }
+    }
+  }
+
+  .checkBox {
+    pointer-events: none;
+    transition: all 10s ease;
+    position: absolute;
+    right: 0px;
+    top: 7px;
+  }
+}
+
+//////VAT_recept///////
+
+.vatRadioButton {
+  :global {
+    .ant-radio-button-wrapper {
+      line-height: 39px;
+      height: 43px;
+      width: 100%;
+      text-align: center;
+      margin-left: 2px;
+      color: #a7aab2;
+      background: #f6f7f8;
+      border-color: #a7aab2;
+      border-radius: 10px;
+      border-left-width: 1px;
+    }
+    .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover::before {
+      display: none !important;
+    }
+    .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+      display: none;
+    }
+    .ant-radio-button-wrapper:not(:first-child)::before {
+      width: 0px;
+      padding: 0px 0px;
+    }
+    .ant-radio-group {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+    }
+    .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+      color: var(--main);
+      background: #ffebe4;
+      border-color: var(--main);
+      border-radius: 10px;
+    }
+    .ant-radio-button-wrapper:hover {
+      border-color: var(--main);
+    }
+    .style_vatRadioButton__Qsnaj
+      .ant-radio-group-solid
+      .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus {
+      box-shadow: 0px;
+      color: white;
+      background: white;
+    }
+  }
+}
+
+.deliveryTimeButton {
+  :global {
+    .ant-form-item {
+      margin-bottom: 0px !important;
+      line-height: 0 !important;
+    }
+
+    .ant-typography {
+      position: relative;
+      top: -35px !important;
+      left: 12px;
+      color: #363d4e78;
+      font-size: 11px;
+      pointer-events: none;
+      transition: all 0.1s ease;
+    }
+    .ant-input {
+      height: 40px !important;
+      background-color: #f6f7f8;
+      color: #363d4e;
+      padding: 11px 15px 0px 15px;
+      font-weight: 500;
+      border-radius: 10px;
+    }
+    .ant-radio-button-wrapper {
+      line-height: 35px;
+      height: 40px;
+      width: 100%;
+      text-align: center;
+      margin-left: 2px;
+      color: #a7aab2;
+      background: #f6f7f8;
+      border-color: #a7aab2;
+      border-radius: 10px;
+      border-left-width: 1px;
+    }
+    .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover::before {
+      display: none !important;
+    }
+    .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+      display: none;
+    }
+    .ant-radio-button-wrapper:not(:first-child)::before {
+      width: 0px;
+      padding: 0px 0px;
+    }
+    .ant-radio-group {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+    }
+    .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+      color: var(--main);
+      background: #ffebe4;
+      border-color: var(--main);
+      border-radius: 10px;
+    }
+    .ant-radio-button-wrapper:hover {
+      border-color: var(--main);
+    }
+    .style_vatRadioButton__Qsnaj
+      .ant-radio-group-solid
+      .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus {
+      box-shadow: 0px;
+      color: white;
+      background: white;
+    }
+  }
+
+  .timeDeliverySelect {
+    :global {
+      .ant-select-lg {
+        font-size: 15px;
+      }
+      .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+        padding: 5px 11px;
+      }
+      .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+        height: 40px;
+      }
+      .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        position: relative;
+        background-color: #f6f7f8;
+        border: 1px solid #cdd4db;
+        border-radius: 10px;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+      .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        box-shadow: 0 0 0 0px #cdd4db;
+      }
+      .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+        background-color: #cdd4db;
+      }
+      .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+        background-color: #cdd4db !important;
+      }
+    }
+  }
+}
+
+.VATForm {
+  margin-top: 15px;
+  :global {
+    .ant-form-item {
+      margin-bottom: 0px;
+      line-height: 0.5715;
+    }
+    .ant-radio-group-large .ant-radio-button-wrapper {
+      font-size: 14px;
+    }
+    .ant-input:hover {
+      border-color: #cdd4db;
+      border: 1.9px solid #cdd4db;
+      font-size: 15px;
+    }
+    .ant-input:focus,
+    .ant-input-focused {
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    }
+    // .ant-input {
+    //   border-radius: 10px;
+    //   height: 50px;
+    //   background-color: #f6f7f8;
+    //   color: #363d4e;
+    //   padding: 11px 15px 0px 15px;
+    //   font-weight: 500;
+    // }
+    // .ant-input:placeholder-shown {
+    //   font-size: 12px !important;
+    // }
+
+    .ant-input {
+      height: 50px;
+      background-color: #f6f7f8;
+      color: #363d4e;
+      padding: 11px 15px 0px 15px;
+      font-weight: 500;
+      border-radius: 10px;
+    }
+    input:-internal-autofill-selected {
+      background-color: #f6f7f8 !important;
+    }
+
+    .ant-input:focus {
+      height: 50px;
+      background-color: #f6f7f8;
+      color: #363d4e;
+      padding: 11px 15px 0px 15px;
+      font-weight: 500;
+      border-radius: 10px;
+      &:focus,
+      &:not(:placeholder-shown),
+      & :-webkit-autofill {
+        background-color: #f6f7f8;
+        font-weight: 500;
+        & + .ant-typography {
+          top: -45px;
+          left: 12px;
+          color: #5c616f;
+          font-weight: 400;
+          font-size: 11px;
+        }
+      }
+    }
+
+    textarea,
+    input[type='date'],
+    input[type='datetime'],
+    input[type='datetime-local'],
+    input[type='email'],
+    input[type='month'],
+    input[type='number'],
+    input[type='password'],
+    input[type='range'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
+    input[type='time'],
+    input[type='url'],
+    input[type='week'] {
+      font-size: 16px;
+    }
+  }
+  .placeholderText {
+    :global {
+      .ant-form-item-with-help {
+        & + .ant-typography {
+          position: relative;
+          top: -74px;
+          left: 12px;
+          color: #363d4e78;
+          font-size: 11px;
+          pointer-events: none;
+          transition: all 0.1s ease;
+        }
+      }
+      .ant-typography {
+        position: relative;
+        top: -52px;
+        left: 12px;
+        color: #363d4e78;
+        font-size: 11px;
+        pointer-events: none;
+        transition: all 0.1s ease;
+      }
+    }
+  }
+  .placeholderSelectText {
+    :global {
+      .ant-form-item-with-help {
+        & + .ant-typography {
+          position: relative;
+          top: -85px !important;
+          left: 12px;
+          color: #363d4e78;
+          font-size: 11px;
+          pointer-events: none;
+          transition: all 0.1s ease;
+        }
+      }
+      .ant-typography {
+        position: relative;
+        top: -43px !important;
+        left: 12px;
+        color: #363d4e78;
+        font-size: 11px;
+        pointer-events: none;
+        transition: all 0.1s ease;
+      }
+    }
+  }
+  .rightIcon {
+    :global {
+      .anticon {
+        position: absolute;
+        top: 19px;
+        font-size: 12px;
+        right: 5px;
+      }
+    }
+  }
+  .mapPinIcon {
+    :global {
+      .anticon {
+        position: absolute;
+        top: 25px;
+        font-size: 12px;
+        left: 3px;
+      }
+    }
+  }
+  .deliveryTime {
+    :global {
+      .ant-form-item {
+        width: 110%;
+      }
+    }
+  }
+  .timeSelect {
+    :global {
+      .ant-select-lg {
+        font-size: 15px;
+      }
+      .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+        padding: 8px 11px;
+      }
+      .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+        height: 50px;
+      }
+      .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        position: relative;
+        background-color: #f6f7f8;
+        border: 1px solid #cdd4db;
+        border-radius: 10px;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+      .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        box-shadow: 0 0 0 0px #cdd4db;
+      }
+      .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+        background-color: #cdd4db;
+      }
+      .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+        background-color: #cdd4db !important;
+      }
+    }
+  }
+}
+
+.customerInformation {
+  margin-top: 15px;
+  :global {
+    .ant-form-item {
+      margin-bottom: 0px;
+      line-height: 0.5715;
+    }
+    .ant-radio-group-large .ant-radio-button-wrapper {
+      font-size: 14px;
+    }
+    .ant-input:hover {
+      border-color: #cdd4db;
+      border: 1.9px solid #cdd4db;
+      font-size: 15px;
+    }
+    .ant-input:focus,
+    .ant-input-focused {
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    }
+    // .ant-input {
+    //   border-radius: 10px;
+    //   height: 50px;
+    //   background-color: #f6f7f8;
+    //   color: #363d4e;
+    //   padding: 11px 15px 0px 15px;
+    //   font-weight: 500;
+    // }
+    // .ant-input:placeholder-shown {
+    //   font-size: 12px !important;
+    // }
+
+    .ant-input {
+      height: 50px;
+      background-color: #f6f7f8;
+      color: #363d4e;
+      padding: 11px 15px 0px 15px;
+      font-weight: 500;
+      border-radius: 10px;
+    }
+    input:-internal-autofill-selected {
+      background-color: #f6f7f8 !important;
+    }
+
+    .ant-input:focus {
+      height: 50px;
+      background-color: #f6f7f8;
+      color: #363d4e;
+      padding: 11px 15px 0px 15px;
+      font-weight: 500;
+      border-radius: 10px;
+      &:focus,
+      &:not(:placeholder-shown),
+      & :-webkit-autofill {
+        background-color: #f6f7f8;
+        font-weight: 500;
+        & + .ant-typography {
+          top: -45px;
+          left: 12px;
+          color: #5c616f;
+          font-weight: 400;
+          font-size: 11px;
+        }
+      }
+    }
+
+    textarea,
+    input[type='date'],
+    input[type='datetime'],
+    input[type='datetime-local'],
+    input[type='email'],
+    input[type='month'],
+    input[type='number'],
+    input[type='password'],
+    input[type='range'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
+    input[type='time'],
+    input[type='url'],
+    input[type='week'] {
+      font-size: 16px;
+    }
+  }
+  .placeholderText {
+    :global {
+      .ant-form-item-with-help {
+        & + .ant-typography {
+          position: relative;
+          top: -74px;
+          left: 12px;
+          color: #363d4e78;
+          font-size: 11px;
+          pointer-events: none;
+          transition: all 0.1s ease;
+        }
+      }
+      .ant-typography {
+        position: relative;
+        top: -52px;
+        left: 12px;
+        color: #363d4e78;
+        font-size: 11px;
+        pointer-events: none;
+        transition: all 0.1s ease;
+      }
+    }
+  }
+  .placeholderSelectText {
+    :global {
+      .ant-form-item-with-help {
+        & + .ant-typography {
+          position: relative;
+          top: -85px !important;
+          left: 12px;
+          color: #363d4e78;
+          font-size: 11px;
+          pointer-events: none;
+          transition: all 0.1s ease;
+        }
+      }
+      .ant-typography {
+        position: relative;
+        top: -43px !important;
+        left: 12px;
+        color: #363d4e78;
+        font-size: 11px;
+        pointer-events: none;
+        transition: all 0.1s ease;
+      }
+    }
+  }
+  .rightIcon {
+    :global {
+      .anticon {
+        position: absolute;
+        top: 19px;
+        font-size: 12px;
+        right: 5px;
+      }
+    }
+  }
+  .mapPinIcon {
+    :global {
+      .anticon {
+        position: absolute;
+        top: 25px;
+        font-size: 12px;
+        left: 3px;
+      }
+    }
+  }
+  .deliveryTime {
+    :global {
+      .ant-form-item {
+        width: 110%;
+      }
+    }
+  }
+  .timeSelect {
+    :global {
+      .ant-select-lg {
+        font-size: 15px;
+      }
+      .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+        padding: 8px 11px;
+      }
+      .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+        height: 50px;
+      }
+      .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        position: relative;
+        background-color: #f6f7f8;
+        border: 1px solid #cdd4db;
+        border-radius: 10px;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+      .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        box-shadow: 0 0 0 0px #cdd4db;
+      }
+      .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+        background-color: #cdd4db;
+      }
+      .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+        background-color: #cdd4db !important;
+      }
+    }
+  }
+}
+/////orderSummary
+
+.orderSummaryCard {
+  :global {
+    .ant-card-bordered {
+      border-radius: 0px 0px 15px 15px;
+      // border: 1px solid #f0f0f0;
+      transition: opacity 10s;
+    }
+  }
+
+  .expandRow {
+    transition: all 10s ease;
+    :global {
+      .ant-row {
+        display: flex;
+        flex-flow: row wrap;
+        border: 1px solid #e8ebee;
+        background-color: #e8ebee;
+        border-radius: 10px;
+        padding: 15px 10px 15px 10px;
+      }
+    }
+    .greyText {
+      :global {
+        .ant-typography {
+          color: #a7aab2;
+          overflow-wrap: break-word;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+.expand {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 10s;
+  :global {
+    .ant-typography {
+      font-weight: normal;
+      color: #363d4e;
+    }
+  }
+}
+///cuurentLocation
+
+.currentLocationDiv {
+  :global {
+    .ant-modal-content {
+      border-radius: 10px;
+    }
+  }
+}
+
+.orderReview {
+  :global {
+    .ant-card-body {
+      padding: 11px;
+    }
+    .ant-card-bordered {
+      border-radius: 10px;
+      border: 1px solid var(--main);
+    }
+    .ant-card {
+      width: 100%;
+      background: var(--main);
+    }
+  }
+}
+.orderPercent {
+  :global {
+    .ant-typography strong {
+      padding: 5px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+  }
+}
+
+.nowPayDiv {
+  :global {
+    .ant-modal-content {
+      border-radius: 10px;
+    }
+  }
+}
+
+.phoneNumberDiv {
+  :global {
+    .ant-modal-content {
+      border-radius: 10px;
+    }
+    .ant-modal-footer {
+      padding: 0px 16px 10px 16px;
+      text-align: right;
+      background: transparent;
+      border-radius: 0 0 2px 2px;
+    }
+  }
+}
+
+.paymentButton {
+  margin-bottom: 10px;
+  :global {
+    .ant-card-body {
+      padding: 3px 7px;
+    }
+    .ant-card-bordered {
+      border: 1px solid #dddddd;
+      border-radius: 8px;
+    }
+  }
+}
+
+.kassButton {
+  :global {
+    .ant-card-body {
+      padding: 16px 7px;
+    }
+    .ant-card-bordered {
+      border: 1px solid #dddddd;
+      border-radius: 8px;
+    }
+  }
+}
+
+.nowPayCancelButton {
+  :global {
+    .ant-btn {
+      color: var(--main);
+      border-color: var(--main);
+      background: #fff;
+      width: 257px;
+    }
+
+    .ant-btn-lg {
+      border-radius: 10px;
+    }
+  }
+}
+.nowPayokButton {
+  :global {
+    .ant-btn {
+      color: white;
+      border-color: var(--main);
+      background: var(--main);
+      width: 257px;
+      border-radius: 10px;
+      height: 42px;
+      font-size: 15px;
+    }
+
+    .ant-btn-lg {
+      border-radius: 10px;
+    }
+  }
+}
+
+.drawtButton {
+  :global {
+    .ant-btn {
+      width: 100%;
+      border-color: var(--main);
+      background: var(--main);
+      border-radius: 10px;
+      height: 45px;
+    }
+  }
+
+  .text {
+    color: white;
+    padding: 5px;
+  }
+  .totalText {
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    background: var(--main);
+  }
+}
+//orderHistory
+
+.orderHistoryRestaurant {
+  margin-top: 10px;
+  :global {
+    .ant-card {
+      border-radius: 10px;
+    }
+    .ant-card-bordered {
+      box-shadow: 0px 4px 8px rgb(0 0 0 / 4%), 0px 0px 2px rgb(0 0 0 / 6%), 0px 0px 1px rgb(0 0 0 / 4%);
+    }
+  }
+  .dateText {
+    color: '#5C616F';
+    font-weight: 400, Regular;
+    position: absolute;
+    font-size: 13px;
+    right: 9px;
+    top: 4px;
+  }
+}
+
+.noDataImage {
+  :global {
+    .ant-image-img {
+      opacity: 0.1;
+    }
+  }
+}
+
+//orderHistoryConfirm
+
+.orderHistoryDiv {
+  border-radius: 10px;
+  :global {
+    .ant-drawer-content {
+      border-radius: 10px !important;
+    }
+
+    .ant-drawer-header {
+      background-color: #5340ff;
+      border-radius: 10px !important;
+    }
+
+    .ant-drawer-title {
+      color: #fff;
+    }
+
+    .ant-drawer-body {
+      background-color: #5340ff;
+      color: #fff;
+      border-radius: 10px !important;
+    }
+
+    .site-drawer-render-in-current-wrapper {
+      position: relative;
+      height: 200px;
+      padding: 48px;
+      overflow: hidden;
+      text-align: center;
+      background: #fafafa;
+      border: 1px solid #ebedf0;
+      border-radius: 20px;
+    }
+  }
+}
+.orderHistoryAlert {
+  :global {
+    .ant-alert-info {
+      background-color: #e5f9fe;
+      border-color: #e5f9fe;
+      border-radius: 6px;
+    }
+    .ant-alert-message {
+      color: #0093b9;
+      font-size: 13px;
+    }
+    .ant-alert-info .ant-alert-icon {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #0bb8e4;
+    }
+  }
+}
+
+.orderHistoryDone {
+  :global {
+    .ant-alert-info {
+      background-color: #e5f9fe;
+      border-color: #e5f9fe;
+      border-radius: 6px;
+    }
+    .ant-alert-message {
+      color: #34830c;
+      font-size: 13px;
+    }
+    .ant-alert-info .ant-alert-icon {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #0bb8e4;
+    }
+  }
+}
+
+.orderStatus {
+  :global {
+    .ant-list-item-meta {
+      align-items: center;
+    }
+  }
+}
+
+.successNum {
+  color: var(--main);
+}
+@media (min-width: 1200px) {
+  .successTitle {
+    :global {
+      .ant-typography {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .successTitle {
+    :global {
+      .ant-typography {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 781px) {
+  .successTitle {
+    :global {
+      .ant-typography {
+        font-size: 14px;
+      }
+    }
+  }
+}
+.tokiNumberInput {
+  :global {
+    .ant-input:hover {
+      border-color: hsla(208, 16%, 83%, 1);
+    }
+    .ant-input {
+      border-radius: 10px;
+    }
+  }
+}
+.input {
+  height: 30px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px !important;
+  border-radius: 5px;
+  :global {
+    .ant-input {
+      height: 25px;
+    }
+  }
+}
