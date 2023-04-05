@@ -139,6 +139,7 @@ function restaurant() {
   useEffect(() => {
     getToken();
   }, []);
+
   const getToken = () => {
     if (typeof window !== 'undefined') {
       setToken(localStorage.getItem('token'));
@@ -150,7 +151,7 @@ function restaurant() {
       <Layout>
         {isAuthenticated === true && (
           <>
-            {!participant && <Typography>{token()}</Typography>}
+            {!participant && <Typography>{token}</Typography>}
             {/* {loading ? (
               <div className={styles.qmenuLoader}>
                 <Row justify="center">
