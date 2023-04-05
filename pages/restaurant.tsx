@@ -121,7 +121,7 @@ function restaurant() {
     },
   });
 
-  const [getParticipantBuyer, { data }] = useLazyQuery(GET_BRANCH, {
+  const [getParticipantBuyer] = useLazyQuery(GET_BRANCH, {
     onCompleted(data) {
       setParticipant(data?.getParticipantBuyer);
     },
@@ -132,12 +132,12 @@ function restaurant() {
   });
 
   useEffect(() => {
-    if (localStorage.getItem('token')) {
+    if (token()) {
       getParticipantBuyer();
     }
   }, []);
   const token = () => {
-    if (typeof localStorage !== 'undefined') {
+    if (typeof window !== 'undefined') {
       return localStorage.getItem('token');
     }
   };
@@ -172,7 +172,7 @@ function restaurant() {
                   }
                 >
                   <Headers
-                    // refetch={getParticipantBuyer}
+                    refetch={getParticipantBuyer}
                     branchData={participant}
                     setCurrentLanguage={setCurrentLanguage}
                     currentLanguage={currentLanguage}

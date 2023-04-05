@@ -12,7 +12,7 @@ export interface Payload {
 }
 
 export const setAccessToken = (token: string) => {
-  if (typeof localStorage !== 'undefined') {
+  if (typeof window !== 'undefined') {
     localStorage.setItem('token', token);
   }
 };
