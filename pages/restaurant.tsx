@@ -36,6 +36,7 @@ function restaurant() {
   const [completeOrder, setCompleteOrder] = useState();
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [token, setToken] = useState<any>('');
 
   const [currentLanguage, setCurrentLanguage] = useState(getPayload()?.languages?.filter((language) => language)[0]);
   // const {
@@ -132,13 +133,15 @@ function restaurant() {
   });
 
   useEffect(() => {
-    if (token()) {
-      getParticipantBuyer();
-    }
+    getParticipantBuyer();
+  }, [token]);
+
+  useEffect(() => {
+    getToken();
   }, []);
-  const token = () => {
+  const getToken = () => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('token');
+      setToken(localStorage.getItem('token'));
     }
   };
 
