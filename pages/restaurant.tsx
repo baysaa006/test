@@ -123,6 +123,7 @@ function restaurant() {
   });
 
   const [getParticipantBuyer] = useLazyQuery(GET_BRANCH, {
+    fetchPolicy: 'network-only',
     onCompleted(data) {
       setParticipant(data?.getParticipantBuyer);
     },
@@ -137,14 +138,10 @@ function restaurant() {
   }, [token]);
 
   useEffect(() => {
-    getToken();
-  }, []);
-
-  const getToken = () => {
     if (typeof window !== 'undefined') {
       setToken(localStorage.getItem('token'));
     }
-  };
+  }, []);
 
   return (
     <div>
