@@ -123,7 +123,8 @@ function restaurant() {
   });
 
   const [getParticipantBuyer] = useLazyQuery(GET_BRANCH, {
-    fetchPolicy: 'network-only',
+    fetchPolicy: 'no-cache',
+    nextFetchPolicy: 'network-only',
     onCompleted(data) {
       setParticipant(data?.getParticipantBuyer);
     },
@@ -140,6 +141,16 @@ function restaurant() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setToken(localStorage.getItem('token'));
+    }
+    if (navigator.userAgent.indexOf('SamsungBrowser') > -1) {
+      // If the current browser is Samsung Internet, redirect to Google Chrome
+      window.location.href = 'googlechrome://navigate?url=' + encodeURIComponent(window.location.href);
+    } else if (navigator.userAgent.indexOf('Firefox') > -1) {
+      // If the current browser is Firefox, redirect to Microsoft Edge
+      window.location.href = 'microsoft-edge-https:' + encodeURIComponent(window.location.href);
+    } else {
+      // If the current browser is not supported, show an error message
+      message.warning('Sorry, your browser is not supported. Please use Google Chrome or Microsoft Edge.');
     }
   }, []);
 
