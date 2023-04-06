@@ -24,11 +24,11 @@ const Qr = () => {
       addAFish(0);
       setCreateOrderID('');
       setCompleteOrderID('');
-      authenticate(data.getToken.token, () => router.push(`/restaurant`));
+      authenticate(data.getBuyerToken.token, () => router.push(`/restaurant`));
     },
     onError(err) {
       message.warning(err.message);
-      router.push('/notfound');
+      // router.push('/notfound');
     },
   });
 
@@ -39,7 +39,7 @@ const Qr = () => {
         localStorage.removeItem('token');
       }
       changeQr(id.toString());
-      getCurrentToken({ variables: { code: id } });
+      getCurrentToken({ variables: { pin: password, code: id } });
     }
   }, [verified]);
 

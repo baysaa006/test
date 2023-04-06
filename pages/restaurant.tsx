@@ -8,14 +8,12 @@ import Headers from './layout/Header';
 import { useLazyQuery, useMutation, useQuery, useSubscription } from '@apollo/client';
 import { GET_BRANCH } from '../graphql/query/branch.qeury';
 import { Row, Image, message, Typography } from 'antd';
-import KaraokeAffix from '../components/karaokeAffix/KaraokeAffix';
 import logoLoader from '../assets/loader/logoLoader.gif';
 import styles from './layout/style.module.scss';
 import { AuthContext, getAccessToken, getPayload, setAccessToken } from '../contexts/auth.context';
 import { useStore, useStoreFoods } from '../contexts/food.store';
 import { Layout } from 'antd';
 import { ON_TRACK_ORDER } from '../graphql/subscription/onUpdatedOrder';
-import IOrders from '../types/order';
 import { isEmpty } from 'lodash';
 import SelectedOrder from '../components/OrderHistory/SelectedOrder';
 import useSound from 'use-sound';
@@ -23,10 +21,7 @@ import { useCartStore } from '../contexts/cart.store';
 import { Translator } from 'react-auto-translate';
 import { cacheProvider } from '../contexts/translate.context';
 import { GOOGLE_CLOUD_KEY } from '../constants/Api';
-import { CURRENT_TOKEN } from '../graphql/mutation/scan';
-import { ME } from '../graphql/query/user.query';
 import { GET_SALES } from '../graphql/query/sale.qeury';
-import client from '../providers/client';
 
 function restaurant() {
   const router = useRouter();
@@ -122,7 +117,7 @@ function restaurant() {
     },
   });
 
-  const [getParticipantBuyer] = useLazyQuery(GET_BRANCH, {
+  const [getParticipantBuyer, { data }] = useLazyQuery(GET_BRANCH, {
     fetchPolicy: 'no-cache',
     nextFetchPolicy: 'network-only',
     onCompleted(data) {
@@ -159,54 +154,12 @@ function restaurant() {
       setToken(localStorage.getItem('token'));
     }
   }, []);
+  console.log(data?.getParticipantBuyer.id);
 
   return (
     <div>
       <Layout>
-        {isAuthenticated === true && (
-          <>
-            {loading ? (
-              <div className={styles.qmenuLoader}>
-                <Row justify="center">
-                  <Image src={logoLoader} alt="loader" height={50} width={50} preview={false} />
-                </Row>
-              </div>
-            ) : (
-              <Translator cacheProvider={cacheProvider} from="mn" to={currentLanguage} googleApiKey={GOOGLE_CLOUD_KEY}>
-                <div
-                  style={
-                    participant && {
-                      background: `url(${
-                        participant && isEmpty(participant?.branch?.background) ? null : participant?.branch?.background
-                      })`,
-                      backgroundPosition: 'center',
-                      height: '100%',
-                      backgroundSize: '100% ',
-                      backgroundRepeat: 'repeat',
-                    }
-                  }
-                >
-                  <Headers
-                    refetch={getParticipantBuyer}
-                    branchData={participant}
-                    setCurrentLanguage={setCurrentLanguage}
-                    currentLanguage={currentLanguage}
-                    loading={loading}
-                  />
-                  <SingleRestaurantBanner restaurantInfo={participant} loading={loading} />
-                  <SingleRestaurantFilterContainer
-                    branchData={participant}
-                    loading={loading}
-                    // loadingUser={loadingUser}
-                    // userData={userData}
-                  />
-                  <SingleRestaurantFooter footerInfo={participant?.branch} />
-                  {/* {data?.getParticipantBuyer.channel !== 'K' && <KaraokeAffix />} */}
-                </div>
-              </Translator>
-            )}
-          </>
-        )}
+        {isAuthenticated === true && <>{data?.getParticipantBuyer.id}</>}
         {completeOrder && (
           <SelectedOrder
             selectedItems={completeOrder}
