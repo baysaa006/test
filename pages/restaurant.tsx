@@ -7,13 +7,15 @@ import SingleRestaurantFooter from './layout/SingleRestaurantFooter';
 import Headers from './layout/Header';
 import { useLazyQuery, useMutation, useQuery, useSubscription } from '@apollo/client';
 import { GET_BRANCH } from '../graphql/query/branch.qeury';
-import { Row, Image, message, Typography } from 'antd';
+import { Row, Image, message } from 'antd';
+import KaraokeAffix from '../components/karaokeAffix/KaraokeAffix';
 import logoLoader from '../assets/loader/logoLoader.gif';
 import styles from './layout/style.module.scss';
 import { AuthContext, getAccessToken, getPayload, setAccessToken } from '../contexts/auth.context';
 import { useStore, useStoreFoods } from '../contexts/food.store';
 import { Layout } from 'antd';
 import { ON_TRACK_ORDER } from '../graphql/subscription/onUpdatedOrder';
+import IOrders from '../types/order';
 import { isEmpty } from 'lodash';
 import SelectedOrder from '../components/OrderHistory/SelectedOrder';
 import useSound from 'use-sound';
@@ -21,6 +23,7 @@ import { useCartStore } from '../contexts/cart.store';
 import { Translator } from 'react-auto-translate';
 import { cacheProvider } from '../contexts/translate.context';
 import { GOOGLE_CLOUD_KEY } from '../constants/Api';
+import NotFound from '../pages/404';
 import { GET_SALES } from '../graphql/query/sale.qeury';
 
 function restaurant() {
@@ -31,7 +34,6 @@ function restaurant() {
   const [completeOrder, setCompleteOrder] = useState();
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [token, setToken] = useState<any>('');
 
   const [currentLanguage, setCurrentLanguage] = useState(getPayload()?.languages?.filter((language) => language)[0]);
   // const {
@@ -117,9 +119,7 @@ function restaurant() {
     },
   });
 
-  const [getParticipantBuyer, { data }] = useLazyQuery(GET_BRANCH, {
-    fetchPolicy: 'no-cache',
-    nextFetchPolicy: 'network-only',
+  const [getParticipantBuyer, { data: getParticipant, loading: getLoading }] = useLazyQuery(GET_BRANCH, {
     onCompleted(data) {
       setParticipant(data?.getParticipantBuyer);
     },
@@ -131,40 +131,64 @@ function restaurant() {
 
   useEffect(() => {
     getParticipantBuyer();
-  }, [token]);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     if (!participant) {
-  //       if (navigator.userAgent.indexOf('SamsungBrowser') > -1) {
-  //         // If the current browser is Samsung Internet, redirect to Google Chrome
-  //         window.location.href = 'googlechrome://navigate?url=' + encodeURIComponent(window.location.href);
-  //       } else if (navigator.userAgent.indexOf('Firefox') > -1) {
-  //         // If the current browser is Firefox, redirect to Microsoft Edge
-  //         window.location.href = 'microsoft-edge-https:' + encodeURIComponent(window.location.href);
-  //       } else {
-  //         // If the current browser is not supported, show an error message
-  //         message.warning('Sorry, your browser is not supported. Please use Google Chrome or Microsoft Edge.');
-  //       }
-  //     }
-  //   }, 4000);
-  // }, [token]);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setToken(localStorage.getItem('token'));
-    }
   }, []);
 
   return (
     <div>
       <Layout>
-        {isAuthenticated === true && <>{data?.getParticipantBuyer.id}</>}
+        {isAuthenticated === true && (
+          <>
+            {getLoading ? (
+              <div className={styles.qmenuLoader}>
+                <Row justify="center">
+                  <Image src={logoLoader} alt="loader" height={50} width={50} preview={false} />
+                </Row>
+              </div>
+            ) : (
+              <Translator cacheProvider={cacheProvider} from="mn" to={currentLanguage} googleApiKey={GOOGLE_CLOUD_KEY}>
+                <div
+                  style={
+                    getParticipant?.getParticipantBuyer && {
+                      background: `url(${
+                        getParticipant?.getParticipantBuyer &&
+                        isEmpty(getParticipant?.getParticipantBuyer?.branch?.background)
+                          ? null
+                          : getParticipant?.getParticipantBuyer?.branch?.background
+                      })`,
+                      backgroundPosition: 'center',
+                      height: '100%',
+                      backgroundSize: '100% ',
+                      backgroundRepeat: 'repeat',
+                    }
+                  }
+                >
+                  <Headers
+                    // refetch={getParticipantBuyer}
+                    branchData={getParticipant?.getParticipantBuyer}
+                    setCurrentLanguage={setCurrentLanguage}
+                    currentLanguage={currentLanguage}
+                    loading={loading}
+                  />
+                  <SingleRestaurantBanner restaurantInfo={getParticipant?.getParticipantBuyer} loading={loading} />
+                  <SingleRestaurantFilterContainer
+                    branchData={getParticipant?.getParticipantBuyer}
+                    loading={loading}
+                    // loadingUser={loadingUser}
+                    // userData={userData}
+                  />
+                  <SingleRestaurantFooter footerInfo={getParticipant?.getParticipantBuyer?.branch} />
+                  {/* {data?.getParticipantBuyer.channel !== 'K' && <KaraokeAffix />} */}
+                </div>
+              </Translator>
+            )}
+          </>
+        )}
         {completeOrder && (
           <SelectedOrder
             selectedItems={completeOrder}
             visible={visible}
             onClose={onCloseSelectedDrawer}
-            branchData={participant}
+            branchData={getParticipant.getParticipantBuyer}
           />
         )}
       </Layout>
