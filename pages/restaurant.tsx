@@ -154,7 +154,6 @@ function restaurant() {
       setToken(localStorage.getItem('token'));
     }
   }, []);
-  console.log(data?.getParticipantBuyer.id);
 
   return (
     <div>

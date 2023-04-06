@@ -38,7 +38,6 @@ const ReviewModal = ({ visible, order, onClose, setReviewed, reviewed }: Props) 
   const data = ['Амт', 'Савалгаа', 'Хоолны орц'];
   const [createReview, { loading }] = useMutation(CREATE_ORDER_REVIEW);
   const submit = () => {
-    console.log(active);
     createReview({
       variables: {
         id: order.id,
@@ -159,7 +158,7 @@ const ReviewModal = ({ visible, order, onClose, setReviewed, reviewed }: Props) 
             <CheckCircleOutlined style={{ color: 'green', fontSize: '100px' }} />{' '}
             <Text style={{ fontSize: '25px', textAlign: 'center' }} strong>
               Үнэлгээ өгсөнд баярлалаа
-            </Text>{' '}
+            </Text>
           </div>
         ) : (
           <div>{content}</div>

@@ -1,6 +1,6 @@
 import { Button, Modal, Row, Typography } from 'antd';
 import { isEmpty } from 'lodash';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { dateFormat, moneyFormat } from '../../../helper/constant';
 import styles from './style.module.scss';
 import QRCode from 'qrcode';
@@ -25,13 +25,15 @@ const ReceiptModal = ({ visible, order, withVat, onClose }: Props) => {
   const withVats = order?.vatState === 'G' && withVat;
   const orderTaxSum = order && Math.abs(order?.taxAmount + order?.vatAmount + order?.cityTax).toFixed(2);
   var qrData = [{ data: isEmpty(order?.vatData) ? '' : order?.vatData, mode: 'numeric' }];
-  QRCode.toDataURL(qrData, { errorCorrectionLevel: 'L' })
-    .then((url: any) => {
-      setQrImg(url);
-    })
-    .catch((err: any) => {
-      console.error(err);
-    });
+  useEffect(() => {
+    QRCode.toDataURL(qrData, { errorCorrectionLevel: 'L' })
+      .then((url: any) => {
+        setQrImg(url);
+      })
+      .catch((err: any) => {
+        console.error(err);
+      });
+  }, []);
 
   const headerTitle = (
     <>
